@@ -1,0 +1,303 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <style>
+	::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-thumb {
+  background:rgba(255, 99, 71, .3);
+  border-radius:2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background:rgba(255, 99, 71, .9);
+  border-radius:2px;
+}
+      .footer1{
+        font-size: 14px!important;
+      }
+    </style>
+    <title>JMIT</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'fonts/icomoon/header2.css' %}">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link media="all" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="shortcut icon" class = "img-responsive" type="image/ico" href="{% static 'image/newlogo.ico' %}" style="max-width: 100% !important;">
+  
+    {% block custom_css %}{% endblock custom_css %}
+  </head>
+  <body>
+
+
+    <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+          <div class="site-mobile-menu-close mt-3">
+            <span class="icon-close2 js-menu-toggle"></span>
+          </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+      </div>
+
+
+      <div class="top-bar" style="background-color: #192f59;">
+
+
+            <div class="col" >
+             <a href="mailto:director@jmit.ac.in" class="" style="padding-left: 25px;color: #e6e6e6;"><span class="mr-2  icon-envelope-open-o"></span> <span class="d-none d-md-inline-block">director@jmit.ac.in</span></a>
+              <span class="mx-md-2 d-inline-block"></span>
+              <a href="#" class="" style="color: #e6e6e6;"><span class="mr-2  icon-phone"></span> <span class="d-none d-md-inline-block">01732-283700</span></a>
+
+
+              <div class="float-right">
+
+                <!-- <a href="#" class=""><i class="fa fa-sign-in" aria-hidden="true"></i> <span class="d-none d-md-inline-block"></span></a> -->
+                <span class="mx-md-2 d-inline-block"></span>
+                <a href="/login/" class="" style="padding-right:40px;color: #e6e6e6; ;"><span class="mr-2  icon-sign-in"></span> <span >LOGIN</span></a>
+
+              </div>
+
+          
+
+          </div>
+
+
+      </div>
+
+      <header class="site-navbar js-sticky-header site-navbar-target" role="banner" style="height: 85px !important;">
+
+          <div class="row align-items-center position-relative">
+
+
+            <div class="site-logo" style="padding-left: 20px;">
+              <a href="#" class="text-black" ><span class="text-primary"><img src="{% static 'image/logo.png' %}" style="max-width: 100%;" height="70px" >  &nbsp;</a>
+
+            </div>
+
+            <div class="col-12">
+              <nav class="site-navigation text-right ml-auto " role="navigation" style="padding-right: 40px;">
+
+                <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
+                  <li><a href="http://127.0.0.1:8000/" class="nav-link">Home</a></li>
+                  <li class="has-children">
+                    <a href="#about-section" class="nav-link">About Us</a>
+                    <ul class="dropdown arrow-top">
+                      <li><a href="/overview/" class="nav-link">Overview</a></li>
+                      <li><a href="/socialrespons/" class="nav-link">Social Responsibilities</a></li>
+                      
+                      <li><a href="/rulesandregulation/" class="nav-link">Rules and Regulations</a></li>
+                   
+                      <!-- <li class="has-children">
+                        <a href="#">More Links</a>
+                        <ul class="dropdown">
+                          <li><a href="#">Menu One</a></li>
+                          <li><a href="#">Menu Two</a></li>
+                          <li><a href="#">Menu Three</a></li>
+                        </ul>
+                      </li> -->
+                    </ul>
+                  </li>
+
+
+                  <li class="has-children">
+                    <a href="#about-section" class="nav-link">Infrastructure</a>
+                    <ul class="dropdown arrow-top">
+                      <li><a href="/campus/" class="nav-link">Campus</a></li>
+                      <li><a href="/lab/" class="nav-link">Labs</a></li>
+                      <li><a href="/library/" class="nav-link">Library</a></li>
+                      <li><a href="/audi/" class="nav-link">Auditorium</a></li>
+                      <li><a href="/dispensary/" class="nav-link">Dispensary</a></li>
+                      <li><a href="/hostel/" class="nav-link">Hostels</a></li>
+                      <li><a href="/sports/" class="nav-link">Sports</a></li>
+
+                    </ul>
+                  </li>
+                  <li class="has-children">
+                    <a href="#about-section" class="nav-link">Academics</a>
+                    <ul class="dropdown arrow-top">
+                      <li><a href="/aoverview/" class="nav-link">Overview</a></li>
+                      <li><a href="/ac/" class="nav-link">Academic Calender</a></li>
+                      <li><a href="/R&D/" class="nav-link">R&D</a></li>
+                      <li><a href="/scholarship/" class="nav-link">Scholarships</a></li>
+
+
+                    </ul>
+                  </li>
+
+                  <li class="has-children">
+                    <a href="#about-section" class="nav-link">Admission</a>
+                    <ul class="dropdown arrow-top">
+                      <li><a href="/admission_procedure/" class="nav-link">Procedure</a></li>
+                      <li><a href="/courses_offered/" class="nav-link">Courses Offered</a></li>
+                      <li><a href="/fees/" class="nav-link">Fee Structure</a></li>
+                      <li><a href="/Epros/" class="nav-link">E-Prospectus</a></li>
+
+
+                    </ul>
+                  </li>
+                  <li class="has-children">
+                    <a href="#about-section" class="nav-link">Placements</a>
+                    <ul class="dropdown arrow-top">
+                      <li><a href="/placement/" class="nav-link">Placements</a></li>
+
+                      <li><a href="/edcell/" class="nav-link">Enterpreneurship Cell</a></li>
+                      <li><a href="/training/" class="nav-link">Trainings</a></li>
+
+
+                    </ul>
+                  </li>
+
+                </ul>
+              </nav>
+
+            </div>
+
+            <div class="toggle-button d-inline-block d-lg-none"><a href="#" class="site-menu-toggle py-5 js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+
+          </div>
+
+
+      </header>
+
+
+
+  {% block content %}
+
+
+  {% endblock %}
+  <footer class="text-center text-lg-start bg-light text-muted" style="background-color: #192f59 !important;">
+    <!-- Section: Social media -->
+    <section
+      class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom footer1">
+      <!-- Left -->
+      <div class="me-5 d-none d-lg-block" style="color: white;" class="footer1">
+        <span>Get connected with us on social networks:</span>
+      </div>
+      <!-- Left -->
+
+      <!-- Right -->
+      <div>
+        <a href="https://www.facebook.com/jmitinstitute/"><i class="fa fa-facebook" aria-hidden="true" style="font-size:20px;"></i></a>
+         &nbsp; <a href="https://twitter.com/jmitcollege?lang=en"><i class="fa fa-twitter" style="font-size:20px;"></i></a>
+
+         &nbsp;  <a href="https://in.linkedin.com/school/seth-jai-prakash-mukand-lal-institute-of-engineering-&-technology-jmit-/"><i class="fa fa-linkedin" style="font-size:20px;"></i></a>
+         &nbsp;  <a href="https://www.youtube.com/c/JmitCollege/videos?app=desktop&view=0&sort=dd&shelf_id=1"><i class="fa fa-youtube" style="font-size:20px;"></i></a>
+        &nbsp;  <a href="https://www.instagram.com/jmitinstitute/"><i class="fa fa-instagram" style="font-size:20px;"></i></a>
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4" style="color: white;" class="footer1">
+              JMIT
+            </h6>
+            <p style="color: white;" class="footer1">
+              We don’t just give students an education and experiences that set them up for success in a career. We help them succeed in their career—to discover a field they’re passionate about and dare to lead it.
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4 footer1" style="color: white;" >
+             OUR RECRUITERS
+            </h6>
+            <p style="color: white;" class="footer1">
+              <a href="https://www.tcs.com/" class="text-reset">TCS</a>
+            </p>
+            <p style="color: white;" class="footer1">
+              <a href="https://www.infosys.com/" class="text-reset">INFOSYS</a>
+            </p>
+            <p style="color: white;" class="footer1">
+              <a href="https://micromaxinfo.com/" class="text-reset">MICROMAX</a>
+            </p>
+            <p style="color: white;" class="footer1">
+              <a href="https://www.samsung.com/in/" class="text-reset">SAMSUNG</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4 footer1" style="color: white;">
+              Useful links
+            </h6>
+            <p style="color: white;" class="footer1">
+              <a href="/overview/" class="text-reset">ABOUT US</a>
+            </p>
+            <p style="color: white;" class="footer1">
+              <a href="/courses_offered/" class="text-reset">COURSES</a>
+            </p>
+            <p style="color: white;" class="footer1">
+              <a href="/contact/" class="text-reset">CONTACT</a>
+            </p>
+            <p style="color: white;" class="footer1">
+              <a href="/Epros/" class="text-reset">E-PROSPECTUS</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4 footer1" style="color: white;">
+              Contact
+            </h6>
+            <p style="color: white;" class="footer1"><i class="fa fa-home me-3"></i> Radaur-135133
+              (Distt. Yamuna Nagar)
+              Haryana </p>
+
+            <p style="color: white;" class="footer1"><i class="fa fa-phone me-3"></i> 01732-283700</p>
+            <p style="color: white;" class="footer1"><i class="fa fa-phone me-3"></i> 8295905206</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <!-- <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2021 Copyright:
+      <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div> -->
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+
+  <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/jquery.sticky.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  </body>
+</html>

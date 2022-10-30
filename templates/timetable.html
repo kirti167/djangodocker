@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, td, th {
+  border: 1px solid black;
+  
+}
+
+table {
+  border-collapse: collapse;
+  width:100%;
+  
+}
+
+th {
+  height: 70px;
+}
+
+tr{
+height: 70px;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+
+<h2><center>Timetable for class {{ classget }}</center>
+ </h2>
+
+
+<table>
+  <tr>
+    <th width='10%'>DAY</th>
+    {% for i in slots %}
+    <th width='10%'>{{i.slot}} </th>
+      {% endfor %}
+    
+    
+  </tr>
+  <tr>
+    <td width='10%'>MONDAY</td>
+    <td width='10%'></td>
+    <td width='10%'></td>
+    <td width='10%'></td>
+    <td width="10%"></td>
+    <td width='10%' rowspan='5' align="center">LUNCH</th></td>
+    <td width='10%'></td>
+    <td width='10%'></td>
+    <td width='10%'></td>
+    <td width='10%'></td>
+    
+  </tr>
+  <tr>
+    <td width='10%'>TUESDAY</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td width='10%'></td>
+    <td width='10%'></td>
+    <td width='10%'></td>
+    <td width='10%'></td>
+    
+
+  </tr>
+  <tr>
+    <td width='10%'>WEDNESDAY</td>
+    <td width='10%'></td>
+    <td width='10%'></td>
+    <td width='10%'></td>
+    <td width='10%'></td>
+    <td width='10%'></td>
+    <td width='10%'></td>
+    <td width='10%'></td>
+    <td width='10%'></td>
+  </tr>
+  <tr>
+    <td>THURSDAY</td>
+    <td></td>
+    <td></td>
+    <td width='10%'></td>
+    <td width='10%'></td>
+    <td width='10%'></td>
+    <td width='10%'></td>
+    <td width='10%'></td>
+    <td width='10%'></td>
+  </tr>
+  <tr>
+    <td>FRIDAY</td>
+    <td></td>
+    <td></td>
+    <td width='10%'></td>
+    <td width='10%'></td>
+    <td width='10%'></td>
+    <td width='10%'></td>
+    <td width='10%'></td>
+    <td width='10%'></td>
+  </tr>
+</table>
+</div>
+</body>
+</html>

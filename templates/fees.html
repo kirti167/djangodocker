@@ -1,0 +1,250 @@
+{% extends 'header.html' %}
+{% load static %}
+{% block content %}
+<style>
+.animate {
+  border-right: solid 3px #FC6D6D;
+  white-space: nowrap;
+  overflow: hidden;    
+  font-family: 'Poppins', sans-serif;
+  font-size: 4vh;
+  color: pink;
+  vertical-align: middle 
+ 
+}
+
+/* Animation */
+.animate{
+  animation: animated-text 3s steps(29,end) 1s 1 normal both,
+             animated-cursor 500ms steps(29,end) infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 310px;}
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor{
+  from{border-right-color: #FC6D6D;}
+  to{border-right-color: transparent;}
+}
+table {
+  border: 1px #a39485 solid;
+  font-size: .9em;
+  box-shadow: 0 2px 5px rgba(0,0,0,.25);
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 5px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #61bbd4, #8cdd9d);
+ 
+}
+
+th {
+  text-align: left;
+}
+  
+thead {
+  font-weight: bold;
+  color: #fff;
+  background: #192f59;
+}
+  
+ td, th {
+  padding: 1em .5em !important;
+  vertical-align: middle;
+}
+  
+ td {
+  border-bottom: 1px solid rgba(0,0,0,.1);
+
+}
+
+
+  
+ @media all and (max-width: 768px) {
+    
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  
+  th {
+    text-align: right;
+  }
+  
+  table {
+    position: relative; 
+    padding-bottom: 0;
+    border: none;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+  }
+  
+  thead {
+    float: left;
+    white-space: nowrap;
+  }
+  
+  tbody {
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    white-space: nowrap;
+  }
+  
+  tr {
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  th {
+    border-bottom: 1px solid #a39485;
+  }
+  
+  td {
+    border-bottom: 1px solid #e5e5e5;
+  }
+  
+  
+  }
+  .para1 p{
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-family: "Roboto",sans-serif;
+    color: #777;
+    
+
+  }
+
+  /* body{
+       
+       background: linear-gradient(-45deg, #ddd6f3, #faaca8);
+ 
+ animation: gradient 15s ease infinite;
+      } */
+
+
+</style>
+
+
+    <br>
+    <div class='container'> 
+      
+  
+                       <br>
+                       <div data-aos="fade-right"  data-aos-duration="1000">
+					   <center><h2 style="color: black;font-size: 45px;" data-aos="fade-right"  data-aos-duration="1000" class="animate">Fee Structure</h2></center><br>
+    
+
+
+<div class="container">
+    <h4>Course Fees</h4>
+    <br>
+    <table>
+      <thead>
+      <tr>
+          <th>S.NO</th>
+          <th>Course</th>
+          <th>Fee Session (2020-21)</th>
+          <th>Semester Wise</th>
+       
+          
+  
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr>
+          <td>1.</td>
+          <td>B.Tech.</td>
+          <td>89090</td>
+          <td>44545</td>
+      </tr>
+      <tr>
+        <td>2.</td>
+        <td>MBA</td>
+        <td> 	67520</td>
+        <td>33260</td>
+    </tr>
+    <tr>
+      <td>3.</td>
+      <td>MCA</td>
+      <td>71390</td>
+      <td>35695</td>
+  </tr>
+  <tr>
+    <td>4.</td>
+    <td>BBA</td>
+    <td>38540</td>
+    <td>19270</td>
+</tr>
+<tr>
+  <td>5.</td>
+  <td>BCA</td>
+  <td>39340</td>
+  <td>19670</td>
+</tr>
+     
+     
+      </tbody>
+  </table> <br>
+  Note: 1. One time refudable security of Rs. 2,000/- is included in the fee. <br>
+ &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Provision of study loan/ freeships as per need & merit based is available.
+  </div>
+  
+<br></div>
+<div data-aos="fade-right"  data-aos-duration="1000">
+<div class="container">
+    <h4>Hostel Fees</h4>
+    <br>
+    <table>
+      <thead>
+      <tr>
+          <th>S.No</th>
+          <th>Particulars</th>
+          <th>Non AC Room (including amenities)</th>
+          <th>AC Room</th>
+       
+          
+  
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr>
+          <td>1</td>
+          <td>Triple Seater Hostel</td>
+          <td>27000/-</td>
+          <td>31000/-</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Double Seater Hostel</td>
+        <td> 	29000/-</td>
+        <td>35000/-</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Single Seater Hostel</td>
+      <td>33000/-</td>
+      <td>40000/-</td>
+  </tr>
+
+     
+      </tbody>
+  </table>
+  <br>
+  The schedule and days for the utilization of air-conditioners will be notified in due course.
+  </div>
+  <br></div>
+  </div></div>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+       
+     
+   <script>
+    AOS.init();
+  </script>
+{% endblock %}

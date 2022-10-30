@@ -1,0 +1,37 @@
+{% extends 'header.html' %}
+{% load static %}
+{% block content %}
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="{% static 'css/pros.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <header class="page-header page-header--l1"><div class="page-header__inner max"><div class="logo"></div> <h1 class="page-header__heading animate__animated animate__fadeInLeft animate__delay-1s" > <br>E-prospectus</h1></div> <div class="page-header__img page-header__aperture" style="background-image: url(https://jmit.ac.in/templates/jmit/images/slide5.jpg);"></div> <br> <br> <br></header>
+
+    
+   <!-- <section style="background-color: cornsilk;background-image: url(https://www.jmit.ac.in/downloads/photos/thumbs/n60ab77752c836.jpg);background-repeat:no-repeat;  background-size: 1400px 500px;height: 500px;max-width: 100%;" > 
+        <br><br><br><br> <br> <br> <br> <br>
+    <center><div class="one"><p class="animate">Academic Calender</p></div></center> <br><br><br> <br> <br>
+    </section> <br><br>  -->
+
+    <br>
+    <div class="container">
+    
+
+<div data-aos="fade-right">
+
+
+    
+        <h3>You Can Download E-Prospectus From Here</h3>
+     
+    <p class="content">&nbsp;
+    <a href="{% static 'info.pdf' %}" type="button"  class="btn btn-primary">Download</a><br> <br>
+   </p></div>
+</div>
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+       
+     
+   <script>
+    AOS.init();
+  </script>
+    {% endblock %}

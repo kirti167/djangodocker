@@ -1,0 +1,525 @@
+{% extends 'header.html' %}
+{% load static %}
+{% block content %}
+<style>
+ /* table */
+
+table {
+  border: 1px #a39485 solid;
+  font-size: .9em;
+  box-shadow: 0 2px 5px rgba(0,0,0,.25);
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 5px;
+  overflow: hidden;
+  background: linear-gradient(90deg,  #c4e6ec, #f7d4a8);
+}
+
+th {
+  text-align: left;
+}
+  
+thead {
+  font-weight: bold;
+  color: #fff;
+  background: #192f59;
+}
+  
+ td, th {
+  padding: 1em .5em !important; 
+  vertical-align: middle;
+}
+  
+ td {
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  
+}
+
+
+ @media all and (max-width: 768px) {
+    
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  
+  th {
+    text-align: right;
+  }
+  
+  table {
+    position: relative; 
+    padding-bottom: 0;
+    border: none;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    background: linear-gradient(90deg,  #e0f2f8  , #ffffff );
+  }
+  
+  thead {
+    float: left;
+    white-space: nowrap;
+  }
+  
+  tbody {
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    white-space: nowrap;
+  }
+  
+  tr {
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  th {
+    border-bottom: 1px solid #a39485;
+  }
+  
+  td {
+    border-bottom: 1px solid #e5e5e5;
+  }
+  
+  
+  }
+
+
+
+
+/* 
+  body {
+	background: linear-gradient(-45deg, #70e1f5, #ffd194);
+	
+	animation: gradient 15s ease infinite;
+} */
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.one{
+  height: 100%;
+  display: flex;
+  justify-content: left;
+  text-align: left;
+  margin-left: 5%;
+}
+.animate {
+  border-right: solid 3px #FC6D6D;
+  white-space: nowrap;
+  overflow: hidden;    
+  font-family: 'Poppins', sans-serif;
+  font-size: 9vh;
+  color: pink;
+  vertical-align: middle 
+ 
+}
+
+/* Animation */
+.animate{
+  animation: animated-text 3s steps(29,end) 1s 1 normal both,
+             animated-cursor 500ms steps(29,end) infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 370px;}
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor{
+  from{border-right-color: #FC6D6D;}
+  to{border-right-color: transparent;}
+}
+  
+</style>
+<!-- 
+<section style="background-color: cornsilk;background-image: url(https://d3nn873nee648n.cloudfront.net/900x600/2341/14-SM90368.jpg);background-repeat:no-repeat;  background-size: 1400px 500px;height: 500px;max-width: 100%;" >
+  <br><br><br><br> <br> <br> <br> <br> <br> <br> <br>  <br> <br> <br>
+<center><div class="one"><p class="animate">Schlorships</p></div></center> 
+</section> <br><br> -->
+    <div class='container'> 
+        <!-- <nav aria-label="breadcrumbs" style="background:transparent;">
+            <ol itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList" class="page-breadcrumbs max links-reset">
+              <li itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem" class="page-breadcrumbs__item">
+                <meta content="1" itemprop="position">
+                 <a href="http://127.0.0.1:8000/" itemprop="item" class="page-breadcrumbs__link">
+                  
+                    
+                     <i class="fa fa-home"></i></svg>
+                     <span itemprop="name" class="page-breadcrumbs__name">Home</span> 
+                     <svg width="12" height="12" focusable="false" role="img" aria-label="chevron-right" aria-hidden="true" class="page-breadcrumbs__chevron"></svg>
+                       <title>Chevron-right</title> <i class="fa fa-angle-double-right"></i><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-chevron-right"></use></svg></a></li> <li itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem" class="page-breadcrumbs__item"><meta itemprop="position" content="3"> <a href="/admission_procedure/" itemprop="item" class="page-breadcrumbs__link"><span itemprop="name" class="page-breadcrumbs__name">Scholarships</span> <svg width="12" height="12" focusable="false" role="img" aria-label="chevron-right" aria-hidden="true" class="page-breadcrumbs__chevron"><title>Chevron-right</title> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-chevron-right"></use></svg></a></li></ol></nav> -->
+                       <br>
+    <h1 style="color: black;font-size: 60px;" data-aos="fade-right"  data-aos-duration="1000" class="animate">Scholarships</h1><br>
+    
+  
+    
+        <table data-aos="fade-right"  data-aos-duration="3000">
+            
+           
+            <thead>
+            <tr>
+            <th><strong>S.No.</strong></th>
+            <th><strong>Name of Course</strong></th>
+            <th><strong>Category</strong></th>
+            <th><strong>Parents Income</strong></th>
+            <th><strong>Amount of Scholarship</strong></th>
+            <th><strong>Remarks</strong></th>
+            </tr></thead>
+            <tr>
+                <tr>
+                    <td><strong>&nbsp;</strong></td>
+                    <td style="text-align: center;" colspan="5"><strong>&nbsp;</strong> <strong>SC Students</strong> &nbsp; &nbsp;</t>
+                    </tr>
+            <td>1</td>
+            <td><strong>SC Post Matric Scholarship</strong></td>
+            <td><strong>&nbsp;</strong></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>B.Tech.</td>
+            <td>SC</td>
+            <td>250000</td>
+            <td>73518</td>
+            <td>Admission by online councelling&nbsp; and Institute level councelling</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>MBA</td>
+            <td>SC</td>
+            <td>250000</td>
+            <td>51080</td>
+            <td>--- do ----</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>MCA</td>
+            <td>SC</td>
+            <td>250000</td>
+            <td>54500</td>
+            <td>--- do ----</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>BBA</td>
+            <td>SC</td>
+            <td>250000</td>
+            <td>30421</td>
+            <td>--- do ----</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>BCA</td>
+            <td>SC</td>
+            <td>250000</td>
+            <td>32021</td>
+            <td>--- do ----</td>
+            </tr>
+            <tr>
+            <td>2</td>
+            <td style="text-align: center;"><strong>Schedule Caste Sub Plan</strong></td>
+            <td><strong>&nbsp;</strong></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>B.Tech.</td>
+            <td>SC</td>
+            <td>250001 to 350000</td>
+            <td>40000</td>
+            <td>Admission by online councelling only</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>MBA</td>
+            <td>SC</td>
+            <td>250001 to 350000</td>
+            <td>40000</td>
+            <td>Admission by online councelling only</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>MCA</td>
+            <td>SC</td>
+            <td>250001 to 350000</td>
+            <td>40000</td>
+            <td>Admission by online councelling only</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td style="text-align: center;" colspan="5"><strong>BC Students</strong> &nbsp;</td>
+            </tr>
+            <tr>
+            <td>3</td>
+            <td colspan="5"><strong>Backward Class Scholarship</strong> &nbsp; &nbsp; &nbsp; &nbsp;</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>B.Tech.</td>
+            <td>BC</td>
+            <td>150000</td>
+            <td>4200</td>
+            <td>Admission by online councelling&nbsp; and Institute level councelling</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>MBA</td>
+            <td>BC</td>
+            <td>150000</td>
+            <td>4200</td>
+            <td>--- do ----</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>MCA</td>
+            <td>BC</td>
+            <td>150000</td>
+            <td>4200</td>
+            <td>--- do ----</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>BBA</td>
+            <td>BC</td>
+            <td>150000</td>
+            <td>4200</td>
+            <td>--- do ----</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>BCA</td>
+            <td>BC</td>
+            <td>150000</td>
+            <td>4200</td>
+            <td>--- do ----</td>
+            </tr>
+            <tr>
+            <td colspan="6"><strong>Note :</strong> A student can apply for only one type of scholarship. If he applies for more than one scholarship, he himself will be responsible for the consequences.</td>
+            </tr>
+            <tr>
+            <td style="text-align: center;" colspan="6"><strong>&nbsp;</strong> <strong>&nbsp;</strong> <strong>&nbsp;</strong> <strong>Other Students</strong> <strong>&nbsp;</strong></td>
+            </tr>
+            <tr>
+            <td><strong>S.No.</strong></td>
+            <td><strong>Name of Course</strong></td>
+            <td><strong>Category</strong></td>
+            <td><strong>Parents Income</strong></td>
+            <td><strong>Amount of Scholarship</strong></td>
+            <td><strong>Remarks</strong></td>
+            </tr>
+            <tr>
+            <td>1</td>
+            <td colspan="5"><strong>Merit Cum Means Scholarship (Minority)</strong> <strong>&nbsp;</strong> &nbsp; &nbsp; &nbsp;</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>B.Tech.</td>
+            <td>Sikh, Muslim, Jain, Buddhist, Parsi</td>
+            <td>250000</td>
+            <td>25000</td>
+            <td>Qualifying Exam rules should be above 80 %</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>MBA</td>
+            <td>---do ----</td>
+            <td>250000</td>
+            <td>25000</td>
+            <td>---- do ----</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>MCA</td>
+            <td>---do ----</td>
+            <td>250000</td>
+            <td>25000</td>
+            <td>---- do ----</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>BBA</td>
+            <td>---do ----</td>
+            <td>250000</td>
+            <td>25000</td>
+            <td>---- do ----</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>BCA</td>
+            <td>---do ----</td>
+            <td>250000</td>
+            <td>25000</td>
+            <td>---- do ----</td>
+            </tr>
+            <tr>
+            <td>2</td>
+            <td><strong>Post Matric Scholarship (Minority)</strong></td>
+            <td><strong>&nbsp;</strong></td>
+            <td colspan="3" width="527">(Sikh, Muslim, Jain, Buddhist, Parsi )</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>B.Tech.</td>
+            <td>Sikh, Muslim, Jain, Buddhist, Parsi</td>
+            <td>250000</td>
+            <td>6000</td>
+            <td>Qualifying Exam rules should be below 80%</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>MBA</td>
+            <td>---do ----</td>
+            <td>250000</td>
+            <td>6000</td>
+            <td>---- do ----</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>MCA</td>
+            <td>---do ----</td>
+            <td>250000</td>
+            <td>6000</td>
+            <td>---- do ----</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>BBA</td>
+            <td>---do ----</td>
+            <td>250000</td>
+            <td>6000</td>
+            <td>---- do ----</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>BCA</td>
+            <td>---do ----</td>
+            <td>250000</td>
+            <td>6000</td>
+            <td>---- do ----</td>
+            </tr>
+            <tr>
+            <td>3</td>
+            <td colspan="5"><strong>Central Sector Scholarship</strong> <strong>&nbsp;</strong> &nbsp; &nbsp; &nbsp;</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>B.Tech.</td>
+            <td>General/SC/BC</td>
+            <td>800000</td>
+            <td>10000</td>
+            <td>Qualifying Exam rules should be above 80 %</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>MBA</td>
+            <td>-- do ---</td>
+            <td>800000</td>
+            <td>10000</td>
+            <td>---- do ----</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>MCA</td>
+            <td>-- do ---</td>
+            <td>800000</td>
+            <td>10000</td>
+            <td>---- do ----</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>BBA</td>
+            <td>-- do ---</td>
+            <td>800000</td>
+            <td>10000</td>
+            <td>---- do ----</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>BCA</td>
+            <td>-- do ---</td>
+            <td>800000</td>
+            <td>10000</td>
+            <td>---- do ----</td>
+            </tr>
+            <tr>
+            <td>4</td>
+            <td colspan="5"><strong>Jammu &amp; Kashmir Scholarship</strong> <strong>&nbsp;</strong> &nbsp; &nbsp; &nbsp;</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>B.Tech.</td>
+            <td>&nbsp;</td>
+            <td>600000</td>
+            <td>78000</td>
+            <td>Admission Through online councelling under PMSSS</td>
+            </tr>
+            <tr>
+            <td>5</td>
+            <td colspan="5"><strong>Dr. Radha Krishan Foundation Fund Scholarship</strong> <strong>&nbsp;</strong> &nbsp; &nbsp; &nbsp;</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>B.Tech.</td>
+            <td>All Category</td>
+            <td>&nbsp;</td>
+            <td>3000</td>
+            <td>60% for Comp Science and 55% for other streams</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>MBA</td>
+            <td>--- do ----</td>
+            <td>&nbsp;</td>
+            <td>3000</td>
+            <td>----- do -----</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>MCA</td>
+            <td>--- do ----</td>
+            <td>&nbsp;</td>
+            <td>3000</td>
+            <td>----- do -----</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>BBA</td>
+            <td>--- do ----</td>
+            <td>&nbsp;</td>
+            <td>3000</td>
+            <td>----- do -----</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>BCA</td>
+            <td>--- do ----</td>
+            <td>&nbsp;</td>
+            <td>3000</td>
+            <td>----- do -----</td>
+            </tr>
+            </tbody>
+            </table> <br><br>
+         <p data-aos="fade-right"  data-aos-duration="1000">   Note : A student can apply for only one type of scholarship. If he applies for more than one scholarship, he himself will be responsible for the consequences.</div></p>
+        
+      </div>
+    </div></div>
+   
+   
+
+   
+    {% endblock %}

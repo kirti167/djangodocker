@@ -1,0 +1,1519 @@
+{% extends 'header.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<style>
+  
+.body {
+  overflow-x: hidden !important;
+}
+
+
+
+  /* ============counter============= */
+
+
+.container {
+	 display: flex;
+	 flex-wrap: wrap;
+	 justify-content: center;
+	 width: 100%;
+}
+
+.counter{
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  padding: 33px 10px 0;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.counter:before,
+.counter:after{
+  content: '';
+  
+  width: 59%;
+  border-radius: 0 50% 50%;
+  opacity: 0.2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition: all 0.3s ease 0s;
+}
+.counter:after{
+  background: linear-gradient(to right bottom,#BE2D94,transparent);
+  border-radius: 50% 50% 0;
+  top: auto;
+  bottom: 0;
+  left: auto;
+  right: 0;
+}
+.counter .counter-icon{
+  font-size: 40px;
+  text-align: center;
+  line-height: 40px;
+  margin: 0 0 17px;
+  display: inline-block;
+}
+.counter h3{
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin: 0 0 16px;
+}
+.counter .counter-value{
+  font-size: 33px;
+  font-weight: 600;
+  line-height: 33px;
+  display: block;
+}
+.counter.blue:before{ background: linear-gradient(to top left, #8676da,transparent); }
+.counter.blue:after{ background: linear-gradient(to right bottom, #503FA9, transparent); }
+.counter.cyan:before{ background: linear-gradient(to top left, #95CEA4, transparent); }
+.counter.cyan:after{ background: linear-gradient(to right bottom, #05C2E8, transparent); }
+.counter.green:before{ background: linear-gradient(to top left, #cddd1c, transparent); }
+.counter.green:after{ background: linear-gradient(to right bottom, #63B949, transparent); }
+@media screen and (max-width:990px){
+  .counter{ margin-bottom: 40px; }
+
+
+
+
+}
+
+
+
+
+/* video column */
+
+
+@import "compass/css3";
+
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+#hero1{
+ background:url(https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80)repeat;
+ background-size:cover;
+  background-position:center center;
+  background-attachment:fixed;
+  background-repeat: repeat-y;
+  background-size: 100%;
+}
+
+
+.hero, .content{
+  text-align:center; 
+  position:relative;
+  width: 100%;
+}
+
+.inner{
+  min-height:100%;
+  position: relative;
+}
+
+.hero .inner{
+  background: rgba(0,0,0, 0.5) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAYAAACddGYaAAAAD0lEQVQIW2NkQABjRmQOAAM+AGkQsDBSAAAAAElFTkSuQmCC) repeat;}
+
+
+.copy{
+  position:absolute; 
+  top:50%; 
+  height:10em; 
+  margin-top:-5em; 
+  width:100%;
+}
+
+.hero h1, .hero p{ 
+  color:#fff;
+}
+
+.content h1, .content p{
+  color:#333;
+}
+
+h1{
+  margin:0px;
+  font-family: 'Roboto Slab', serif;
+  font-weight:400;
+  font-size:32px;
+  padding:0px 20px;
+}
+
+p{
+  font-family: 'Noto Sans', sans-serif; 
+  font-size:14px;
+  padding:0px 20px;
+}
+
+
+
+.hero .inner .container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+
+.box-hover-effect {
+display: inline-block;
+vertical-align: middle;
+}
+
+
+.box-hover-effect .effect-wrapper .overlay-shade {
+bottom: 0;
+display: block;
+left: 0;
+position: absolute;
+right: 0;
+top: 0;
+z-index: 10;
+background-color: #000;
+opacity: 0;
+filter: alpha(opacity=0);
+-webkit-transition: all 0.5s ease;
+-o-transition: all 0.5s ease;
+transition: all 0.5s ease;
+}
+
+
+.box-hover-effect.play-button .text-holder-middle {
+top: 34%;
+-webkit-transform: scale(1);
+-ms-transform: scale(1);
+-o-transform: scale(1);
+transform: scale(1);
+}
+
+.box-hover-effect.play-button .text-holder {
+opacity: 1;
+}
+.box-hover-effect .effect-wrapper .text-holder-middle {
+display: block;
+left: 0;
+margin: 0 auto;
+right: 0;
+text-align: center;
+/* top: 30%;
+vertical-align: middle; */
+width: 80%;
+}
+.box-hover-effect .effect-wrapper .text-holder {
+display: inline-block;
+opacity: 0;
+/* overflow: hidden; */
+position: absolute;
+-webkit-transition: all 0.3s ease 0s;
+-o-transition: all 0.3s ease 0s;
+transition: all 0.3s ease 0s;
+z-index: 13;
+}
+
+.img-fullwidth {
+width: 100% !important;
+}
+img {
+max-width: 100%;
+}
+img {
+max-width: 100%;
+}
+img {
+vertical-align: middle;
+}
+img {
+border: 0;
+}
+
+
+
+
+
+
+/* =============service================ */
+.service-area
+{   background-image: url(static/image/bg.jpg);
+    
+}
+
+.service-area p
+{
+    margin-bottom: -5px;
+}
+
+.service-wrap
+{
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    overflow: hidden;
+    padding: 25px 35px;
+    position: relative;
+    transition: all 0.5s ease 0s;
+    z-index: 9;
+    margin-top: 20px;
+}
+
+.service-wrap::before, .service-wrap::after
+{
+    content: "";
+    height: 300%;
+    position: absolute;
+    transform: rotate(45deg);
+    width: 120%;
+    z-index: -9;
+    transition: all 0.5s;
+    opacity: 0;
+    background: #192f59;
+}
+
+.service-wrap::before
+{
+    top: -37px;
+    left: 100%;
+}
+
+.service-wrap:hover:before
+{
+    left: -27px;
+    opacity: 1;
+}
+
+.service-wrap::after
+{
+   right: 100%;
+    bottom: -37px;
+}
+
+.service-wrap:hover:after
+{
+   right: -27px;
+    opacity: 1;
+}
+
+.service-wrap:hover
+{
+  color: white;
+}
+
+.service-wrap:h3
+{
+  color: white;
+}
+
+.service-wrap:hover h3
+{
+  color: white;
+}
+
+.service-wrap:hover h3:after
+{
+ background-color: white;
+}
+
+.service-icon i
+{
+    font-size: 30px;
+    margin-bottom: 20px;
+    transition: all 0.5s;
+}
+
+.service-wrap:hover .service-icon i
+{
+    transform: rotate(360deg);
+}
+
+.service-wrap h3
+{
+    font-size: 25px;
+    font-weight: 700;
+    padding-bottom: 15px;
+    position: relative;
+}
+
+.service-wrap p
+{
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+
+
+
+
+
+/* courses---------------------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+
+.container .courses{
+  
+  display: flex;
+  width: 1040px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.course-card {
+  margin: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 300px;
+}
+.course-card-header img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.course-card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  min-height: 250px;
+}
+
+.tag {
+  background: #cccccc;
+  border-radius: 50px;
+  font-size: 12px;
+  margin: 0;
+  color: #fff;
+  padding: 2px 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.tag-teal {
+  background-color: #47bcd4;
+}
+.tag-purple {
+  background-color: #5e76bf;
+}
+.tag-pink {
+  background-color: #cd5b9f;
+}
+
+.course-card-body p {
+  font-size: 13px;
+ padding:0px 0px;
+}
+
+
+
+
+/*  card button */
+.button {
+  border-radius: 30px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* gallery */
+
+.work
+{
+    margin-top: 0px;
+}
+
+.row.no-gutters [class*=col-]
+{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.img-wrapper{
+    overflow: hidden;
+}
+
+.img-wrapper img{
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+
+.img-wrapper img:hover{
+    transform:scale(1.5);
+    cursor: zoom-in;
+}
+
+
+/* fix button */
+.btn-fixed {
+    position: fixed;
+    
+    right: 0;
+    top: 47%;
+    z-index: 999;
+    padding: 10px;
+    background-color: #00118A;
+    width: 150px;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+
+/* testimonial */
+
+
+.heading {
+    text-align: center;
+    color: #454343;
+    font-size: 30px;
+    font-weight: 700;
+    position: relative;
+    margin-bottom: 70px;
+    text-transform: uppercase;
+    z-index: 999;
+}
+.white-heading{
+    color: #ffffff;
+}
+.heading:after {
+    content: ' ';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    height: 40px;
+    width: 180px;
+    border-radius: 4px;
+    transform: translateX(-50%);
+    background: url(img/heading-line.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.white-heading:after {
+    background: url(https://i.ibb.co/d7tSD1R/heading-line-white.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.heading span {
+    font-size: 18px;
+    display: block;
+    font-weight: 500;
+}
+.white-heading span {
+    color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* /-----Testimonial-------/ */
+
+.testimonial:after {
+    position: absolute;
+    top: -0 !important;
+    left: 0;
+    content: " ";
+    background: url(img/testimonial.bg-top.png);
+    background-size: 100% 100px;
+    width: 100%;
+    height: 100px;
+    float: left;
+    z-index: 99;
+}
+
+.testimonial {
+    min-height: 375px;
+    position: relative;
+    background: url(https://media.istockphoto.com/photos/night-school-wooden-mortar-board-light-up-3d-rendering-picture-id1223943975?k=6&m=1223943975&s=612x612&w=0&h=-WZGfxyhqz_LwMEVIalb5k59V4daZVJNBeA_c34Wf3A=);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-position: center;
+        background-size: cover;
+}
+#testimonial4 .carousel-inner:hover{
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+#testimonial4 .carousel-inner:active{
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
+#testimonial4 .carousel-inner .item{
+  overflow: hidden;
+}
+
+.testimonial4_indicators .carousel-indicators{
+  left: 0;
+  margin: 0;
+  width: 100%;
+  font-size: 0;
+  height: 20px;
+  bottom: 15px;
+  padding: 0 5px;
+  cursor: e-resize;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+}
+.testimonial4_indicators .carousel-indicators li{
+  padding: 0;
+  width: 14px;
+  height: 14px;
+  border: none;
+  text-indent: 0;
+  margin: 2px 3px;
+  cursor: pointer;
+  display: inline-block;
+  background: #ffffff;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+}
+.testimonial4_indicators .carousel-indicators .active{
+  padding: 0;
+  width: 14px;
+  height: 14px;
+  border: none;
+  margin: 2px 3px;
+  background-color: #9dd3af;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+}
+.testimonial4_indicators .carousel-indicators::-webkit-scrollbar{
+  height: 3px;
+}
+.testimonial4_indicators .carousel-indicators::-webkit-scrollbar-thumb{
+  background: #eeeeee;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+.testimonial4_control_button .carousel-control{
+  top: 175px;
+  opacity: 1;
+  width: 40px;
+  bottom: auto;
+  height: 40px;
+  font-size: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  overflow: hidden;
+  line-height: 38px;
+  text-shadow: none;
+  text-align: center;
+  position: absolute;
+  background: transparent;
+  border: 2px solid #ffffff;
+  text-transform: uppercase;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: all 0.6s cubic-bezier(0.3,1,0,1);
+  transition: all 0.6s cubic-bezier(0.3,1,0,1);
+}
+.testimonial4_control_button .carousel-control.left{
+  left: 7%;
+  top: 50%;
+  right: auto;
+}
+.testimonial4_control_button .carousel-control.right{
+  right: 7%;
+  top: 50%;
+  left: auto;
+}
+.testimonial4_control_button .carousel-control.left:hover,
+.testimonial4_control_button .carousel-control.right:hover{
+  color: #000;
+  background: #fff;
+  border: 2px solid #fff;
+}
+
+.testimonial4_header{
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 550px;
+  display: block;
+  margin: 30px auto;
+  text-align: center;
+  position: relative;
+}
+.testimonial4_header h4{
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 600;
+  position: relative;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.testimonial4_slide{
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 70%;
+  margin: auto;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+}
+.testimonial4_slide img {
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 136px;
+    height: 136px;
+    margin: auto;
+    display: block;
+    color: #f2f2f2;
+    font-size: 18px;
+    line-height: 46px;
+    text-align: center;
+    position: relative;
+    border-radius: 50%;
+    box-shadow: -6px 6px 6px rgba(0, 0, 0, 0.23);
+    -moz-box-shadow: -6px 6px 6px rgba(0, 0, 0, 0.23);
+    -o-box-shadow: -6px 6px 6px rgba(0, 0, 0, 0.23);
+    -webkit-box-shadow: -6px 6px 6px rgba(0, 0, 0, 0.23);
+}
+.testimonial4_slide p {
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 1.4;
+    margin: 40px 0 20px 0;
+}
+.testimonial4_slide h4 {
+  color: #ffffff;
+  font-size: 22px;
+}
+
+.testimonial .carousel {
+	padding-bottom:50px;
+}
+.testimonial .carousel-control-next-icon, .testimonial .carousel-control-prev-icon {
+    width: 35px;
+    height: 35px;
+}
+/* ------testimonial  close-------*/
+</style>
+
+
+
+
+<link rel="stylesheet" href="{% static 'css/frontpage.css' %}">
+
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" />
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<title>JMIT</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css" integrity="sha512-OdEXQYCOldjqUEsuMKsZRj93Ht23QRlhIb8E/X0sbwZhme8eUw6g8q7AdxGJKakcBbv7+/PX0Gc2btf7Ru8cZA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+<img src="{% static 'image/home2.png' %}" width='100%' alt="" style="max-width: 100%;">
+
+
+
+
+
+
+
+
+<br>
+
+<br>
+
+
+
+
+
+
+ <!-- after corousal -->
+
+ 
+ <section class="ftco-section ftco-no-pt ftc-no-pb" >
+  <div class="container">
+  <div class="row d-flex">
+  <div class="col-md-5 order-md-last wrap-about wrap-about d-flex align-items-stretch">
+  <div class="img" style="background-image:url(https://images.unsplash.com/photo-1494809610410-160faaed4de0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODB8fHN0dWRlbnRzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60);"></div>
+  </div>
+  <div class="col-md-7 wrap-about py-5 pr-md-4 ftco-animate fadeInUp ftco-animated">
+  <h2 class="mb-4" style="padding-left: 20px;">What We Offer</h2>
+  <p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word.</p>
+  <div class="row mt-5">
+  <div class="col-lg-6">
+  <div class="services-2 d-flex" data-aos="fade-right"  data-aos-duration="1000">
+  <div class="icon mt-2 d-flex justify-content-center align-items-center" ><i class="fa fa-shield" aria-hidden="true" style='font-size:40px;color:white'></i>
+  </div>
+  <div class="text pl-3">
+  <h3>Safety First</h3>
+  <p>We Ensure Safety Of Our Students</p>
+  </div>
+  </div>
+  </div>
+  <div class="col-lg-6">
+  <div class="services-2 d-flex"  data-aos="fade-right"  data-aos-duration="1000">
+  <div class="icon mt-2 d-flex justify-content-center align-items-center"><i class="fa fa-pencil-square-o" aria-hidden="true" style='font-size:40px;color:white'></i>
+  </div>
+  <div class="text pl-3">
+  <h3>Regular Classes</h3>
+  <p>We Conduct Regular Compulsion Classes </p>
+  </div>
+  </div>
+  </div>
+  <div class="col-lg-6">
+  <div class="services-2 d-flex"  data-aos="fade-right"  data-aos-duration="1000">
+  <div class="icon mt-2 d-flex justify-content-center align-items-center"><i class="fa fa-graduation-cap" aria-hidden="true" style='font-size:40px;color:white'></i>
+  </div>
+  <div class="text pl-3">
+  <h3>Certified Teachers</h3>
+  <p>Our Teachers are Certified and Experienced</p>
+  </div>
+  </div>
+  </div>
+  <div class="col-lg-6">
+  <div class="services-2 d-flex"  data-aos="fade-right"  data-aos-duration="1000">
+  <div class="icon mt-2 d-flex justify-content-center align-items-center"><i class="fa fa-check-square" aria-hidden="true" style='font-size:40px;color:white'></i>
+
+  </div>
+  <div class="text pl-3">
+  <h3>Sufficient Classrooms</h3>
+  <p>We Have enough Classrooms With Proper Ventilation</p>
+  </div>
+  </div>
+  </div>
+  <div class="col-lg-6">
+  <div class="services-2 d-flex"  data-aos="fade-right"  data-aos-duration="1000">
+  <div class="icon mt-2 d-flex justify-content-center align-items-center"><i class="fa fa-book" aria-hidden="true" style='font-size:40px;color:white'></i>
+  </div>
+  <div class="text pl-3">
+  <h3>Creative Lessons</h3>
+  <p>Creative Methods Of Teaching Are Used</p>
+  </div>
+  </div>
+  </div>
+  <div class="col-lg-6">
+  <div class="services-2 d-flex"  data-aos="fade-right"  data-aos-duration="1000">
+  <div class="icon mt-2 d-flex justify-content-center align-items-center"><i class="fa fa-futbol-o" aria-hidden="true" style='font-size:40px;color:white'></i></div>
+  <div class="text pl-3">
+  <h3>Sports Facilities</h3>
+  <p>We Conduct Different Activities Time to Time</p>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </section>
+  <br>
+
+
+
+
+
+<!-- video column -->
+
+
+
+
+
+
+<section class="ftco-section ftco-counter img" id="section-counter" style="background:url(https://uicookies.com/demo/theme/enlight/img/slider_3.jpg); background-position: 50% -98.2001px;" data-stellar-background-ratio="0.5">
+  <div class="container">
+  <div class="row justify-content-center mb-5 pb-2 d-flex">
+  <div class="col-md-6 align-items-stretch d-flex" data-aos="fade-right"  data-aos-duration="1000">
+  <div class="img img-video d-flex align-items-center" style="background-image:url(https://www.jmit.ac.in/templates/jmit/images/video-bg.jpg)">
+  <div class="video justify-content-center" >
+  <a href="https://www.youtube.com/watch?v=Aay1fr0Fwx0" class="icon-video popup-vimeo d-flex justify-content-center align-items-center">
+  <span class="fa fa-play"></span>
+  </a>
+  </div>
+  </div>
+  </div>
+  <div class="col-md-6 heading-section heading-section-white pl-lg-5 pt-md-0 pt-5 " data-aos="fade-left"  data-aos-duration="1000">
+  <h2 class="mb-4" style="margin-left: 15px;">JMIT College</h2>
+  <p>VISION: "Excellence Through Creativity and Innovation"</p>
+  <p>Seth Jai Parkash Mukand Lal Institute of Knowledge and Service is one among twenty two institutions spread over Haryana, Uttar Pradesh and Punjab and owe their existence to the munificent and philanthropic spirit of Seth Mukand Lal, a close adherent of Gandhi Ji. He came under the Gandhian influence in earlier twenties. Gandhi ji had fondly nick-named him “Pagla Bhagat”. Seth Mukand Lal reportedly bore the entire expenditure incurred in the holding of All India Congress Sessions on the banks of river Ravi, Lahore in 1929 where resolution for complete independence of India was adopted. Illiterate himself, he vowed to dispel the darkness of ignorance</p>
+  
+  </div>
+  </div>
+ 
+
+
+
+
+
+
+  <div class="container">
+    <div class="row" data-aos="fade-up"  data-aos-duration="1000">
+        <div class="col-md-3 col-sm-6">
+            <div class="counter"  >
+                <div class="counter-icon">
+                  <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                </div>
+                <h3>Students Enrolled</h3>
+                <span class="counter-value">1963</span>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="counter">
+                <div class="counter-icon">
+                  <i class="fa fa-users" aria-hidden="true"></i>
+                </div>
+                <h3>Teachers</h3>
+                <span class="counter-value">329</span>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="counter ">
+              <div class="counter-icon">
+                <i class="fa fa-line-chart" aria-hidden="true"></i>
+              </div>
+              <h3>Placements</h3>
+              <span class="counter-value">1854</span>
+          </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="counter ">
+            <div class="counter-icon">
+              <i class="fa fa-university" aria-hidden="true"></i>
+            </div>
+            <h3>Years of Glory</h3>
+            <span class="counter-value">25</span>
+        </div>
+    </div>
+    </div>
+  </div> 
+  </div>
+  </section>
+
+
+
+
+
+
+
+
+
+<!-- Courses -->
+
+
+<section >
+<h1 style="text-align:center;"> <br>
+  OUR POPULAR COURSES</h1>
+
+  <div class='container courses'  >
+    <div class="course-card" style="box-shadow:2px 3px 8px #000000" data-aos="flip-left"  data-aos-duration="1000">
+      <div class="course-card-header">
+        <img src="https://thumbs.dreamstime.com/b/person-using-calendar-computer-to-improve-time-management-plan-appointments-events-tasks-meetings-efficiently-productivity-185365741.jpg" alt="rover" />
+      </div>
+      <div class="course-card-body">
+        <span class="tag tag-teal">Technology</span>
+        
+         <span>
+          <i class="icon-table mr-2" style="font-size: 15px; padding-top: 100px; padding-bottom: 40px;">&nbsp;120 Seats</i> <i class="icon-calendar mr-2" style="font-size: 15px; padding-top: 35px; padding-bottom: 30px;">&nbsp;4 Years</i>
+         </span>
+         <h4 style="color: #5e76bf;">
+         COMPUTER SCIENCE 
+        </h4> 
+        <p>
+          Study of computers and computational systems.It is most Popular Course Of Our College
+        </p> 
+         <center> <br><a class="button" href="/apply/"><span>&nbsp;&nbsp;&nbsp;&nbsp;Register &nbsp;&nbsp;&nbsp;&nbsp;</span></a></center> 
+        
+      </div>
+    </div>
+    <div class="course-card" style="box-shadow:2px 3px 8px #000000" data-aos="flip-left"  data-aos-duration="1000">
+      <div class="course-card-header">
+        <img src="https://thumbs.dreamstime.com/b/person-using-calendar-computer-to-improve-time-management-plan-appointments-events-tasks-meetings-efficiently-productivity-185365741.jpghttps://thumbs.dreamstime.com/b/engineer-drawing-plan-building-safety-engineering-office-location-planning-engineer-drawing-plan-building-safety-engineering-126238729.jpg" alt="rover" />
+      </div>
+      <div class="course-card-body">
+        <span class="tag tag-teal">Technology</span>
+        
+         <span>
+          <i class="icon-table mr-2" style="font-size: 15px; padding-top: 100px; padding-bottom: 40px;">&nbsp;120 Seats</i> <i class="icon-calendar mr-2" style="font-size: 15px; padding-top: 35px; padding-bottom: 30px;">&nbsp;4 Years</i>
+         </span>
+         <h4 style="color: #5e76bf;">
+         INFORMATION TECHNOLOGY
+        </h4> 
+        <p>
+          Building communications networks for a company, safeguarding data and information.
+        </p> 
+         <center> <a class="button" href="/apply/"><span>&nbsp;&nbsp;&nbsp;&nbsp;Register &nbsp;&nbsp;&nbsp;&nbsp;</span></a></center> 
+        
+      </div>
+    </div>
+    
+    <div class="course-card" style="box-shadow:2px 3px 8px #000000" data-aos="flip-left"  data-aos-duration="1000">
+      <div class="course-card-header">
+        <img src="https://thumbs.dreamstime.com/b/construction-structure-concept-engineer-architect-meeting-project-working-partner-engineering-tools-model-138127088.jpg" alt="rover" />
+      </div>
+      <div class="course-card-body">
+        <span class="tag tag-teal">Technology</span>
+        
+         <span>
+          <i class="icon-table mr-2" style="font-size: 15px; padding-top: 100px; padding-bottom: 40px;">&nbsp;120 Seats</i> <i class="icon-calendar mr-2" style="font-size: 15px; padding-top: 35px; padding-bottom: 30px;">&nbsp;4 Years</i>
+         </span>
+         <h4 style="color: #5e76bf;">
+         MECHANICAL
+        </h4> 
+        <p>
+          Study, design, development, construction, and testing of mechanical and thermal sensors and devices.
+        </p> 
+         <center> <br><a class="button" href="/apply/"><span>&nbsp;&nbsp;&nbsp;&nbsp;Register &nbsp;&nbsp;&nbsp;&nbsp;</span></a></center> 
+        
+      </div>
+    </div>
+    <div class="course-card" style="box-shadow:2px 3px 8px #000000" data-aos="flip-left"  data-aos-duration="1000">
+      <div class="course-card-header">
+        <img src="https://thumbs.dreamstime.com/b/components-use-electrical-installations-cut-pliers-connectors-fuses-wires-accessories-engineering-work-energy-66517388.jpg" alt="rover" />
+      </div>
+      <div class="course-card-body">
+        <span class="tag tag-teal">Technology</span>
+        
+         <span>
+          <i class="icon-table mr-2" style="font-size: 15px; padding-top: 100px; padding-bottom: 40px;">&nbsp;120 Seats</i> <i class="icon-calendar mr-2" style="font-size: 15px; padding-top: 35px; padding-bottom: 30px;">&nbsp;4 Years</i>
+         </span>
+         <h4 style="color: #5e76bf;">
+         ELECTRICAL
+        </h4> 
+        <p>
+          Engineering discipline concerned with the study, design and application of equipment, devices and systems which use electricity.
+        </p> 
+         <center>  <a class="button" href="/apply/"><span>&nbsp;&nbsp;&nbsp;&nbsp;Register &nbsp;&nbsp;&nbsp;&nbsp;</span></a></center> 
+        
+      </div>
+    </div>
+    <div class="course-card" style="box-shadow:2px 3px 8px #000000" data-aos="flip-left"  data-aos-duration="1000">
+      <div class="course-card-header">
+        <img src="https://thumbs.dreamstime.com/b/young-lady-thinking-mba-degree-drawn-graduation-hat-range-educational-icons-concrete-background-57696977.jpg" alt="rover" />
+      </div>
+      <div class="course-card-body">
+        <span class="tag tag-teal">Management</span>
+        
+         <span>
+          <i class="icon-table mr-2" style="font-size: 15px; padding-top: 100px; padding-bottom: 40px;">&nbsp;120 Seats</i> <i class="icon-calendar mr-2" style="font-size: 15px; padding-top: 35px; padding-bottom: 30px;">&nbsp;3 Years</i>
+         </span>
+         <h4 style="color: #5e76bf;">
+         MBA
+        </h4> 
+        <p>
+          General management curriculum focused on real-world practice.
+        </p> 
+         <center> <br> <br> <a class="button" href="/apply/"><span>&nbsp;&nbsp;&nbsp;&nbsp;Register &nbsp;&nbsp;&nbsp;&nbsp;</span></a></center> 
+        
+      </div>
+    </div>
+    <div class="course-card" style="box-shadow:2px 3px 8px #000000" data-aos="flip-left"  data-aos-duration="1000">
+      <div class="course-card-header">
+        <img src="https://thumbs.dreamstime.com/b/two-architects-working-discussing-construction-blueprint-laptop-computer-engineering-tools-table-office-young-211889368.jpg"  alt="rover" />
+      </div>
+      <div class="course-card-body">
+        <span class="tag tag-teal">Technology</span>
+        
+         <span>
+          <i class="icon-table mr-2" style="font-size: 15px; padding-top: 100px; padding-bottom: 40px;">&nbsp;120 Seats</i> <i class="icon-calendar mr-2" style="font-size: 15px; padding-top: 35px; padding-bottom: 30px;" >&nbsp;3 Years</i>
+         </span>
+         <h4 style="color: #5e76bf;">
+         BCA
+        </h4> 
+        <p>
+          Course that deals with the basics of computer application and software development.
+        </p> 
+         <center> <br> <a class="button" href="/apply/"><span>&nbsp;&nbsp;&nbsp;&nbsp;Register &nbsp;&nbsp;&nbsp;&nbsp;</span></a></center> 
+        
+      </div>
+    </div>
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+  
+<!-- Services -->
+<section class="service-area" id="services">
+  <h2 style="text-align: center; padding-top: 70px; padding-bottom: 40px;"><b>SERVICES</b></h2>
+  <div class="container">
+    
+
+  
+          
+          <div class="row">
+              <div class="col-md-4 col-sm-6 c0l-xs-12">
+                  <div class="service-wrap text-center">
+                      <div class="service-icon">
+                        <i class="fa fa-building" aria-hidden="true"></i>
+
+                      </div>
+                      <h3>Hostel</h3>
+                      <p> We ensure that students dwell in a healthy environment that helps them to grow and learn without any obstacle. <br><br></p>
+                  </div>
+              </div>
+              <div class="col-md-4 col-sm-6 c0l-xs-12">
+                  <div class="service-wrap text-center">
+                      <div class="service-icon">
+                        <i class="fa fa-laptop"></i>
+
+                      </div>
+                      <h3>Internet Labs</h3>
+                      <p>The internet in today’s world is the basic need of every student because every student want to learn in faster way and they can achieve it through internet. </p>
+                  </div>
+              </div>
+              <div class="col-md-4 col-sm-6 c0l-xs-12">
+                  <div class="service-wrap text-center">
+                      <div class="service-icon">
+                        <i class="fa fa-stethoscope" aria-hidden="true"></i>
+
+
+                      </div>
+                      <h3>Dispensary</h3>
+                      <p>The institution takes extreme care of the health of the students. The institution offers free medical facility to the all students and staff.</p><br>
+                  </div>
+              </div>
+              <div class="col-md-4 col-sm-6 c0l-xs-12">
+                  <div class="service-wrap text-center">
+                      <div class="service-icon">
+                          <i class="fa fa-book"></i>
+                      </div>
+                      <h3>Library</h3>
+                      <p>
+                        
+                        
+                        Library is the nerve centre of knowledge and is virtually the heart of an Academic Institution.</p> <br>
+                  </div>
+              </div>
+              <div class="col-md-4 col-sm-6 c0l-xs-12">
+                  <div class="service-wrap text-center">
+                      <div class="service-icon">
+                        <i class="fa fa-bus" aria-hidden="true"></i>
+
+                      </div>
+                      <h3>TRANSPORTATION</h3>
+                      <p>Institute transportation facility is provided for day-scholars. The transportation fee is set as per the boarding/ station of the student.</p>
+                  </div>
+              </div>
+              <div class="col-md-4 col-sm-6 c0l-xs-12">
+                  <div class="service-wrap text-center">
+                      <div class="service-icon">
+                        <i class="fa fa-coffee" aria-hidden="true"></i>
+
+                      </div>
+                      <h3>CAFE</h3>
+                      <p>The facility of canteen is also provided in the college premises with separate area for girl students and also for staff members.</p> 
+                  </div>
+              </div>
+
+
+          </div>
+      
+  </div>
+  <br>
+</section>
+
+
+
+<!-- Teachers -->
+<br> <br>
+<div class="container-fluid px-4">
+  <div class="row justify-content-center mb-5 pb-2" >
+  <div class="col-md-8 text-center heading-section " >
+  <h2 class="mb-4">Certified Teachers</h2>
+  
+  </div>
+  </div>
+  <div class="row">
+  <div class="col-md-6 col-lg-3 ">
+  <div class="staff">
+  <div class="img-wrap d-flex align-items-stretch">
+  <div class="img align-self-stretch" style="background-image:url(https://www.jmit.ac.in/downloads/nimages/Director-Sir.jpg)"></div>
+  </div>
+  <div class="text pt-3 text-center">
+  <h3>Dr. S.K. Garg</h3>
+  <span class="position mb-2">Director</span>
+  <div class="faded">
+  <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
+  
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="col-md-6 col-lg-3 ">
+  <div class="staff">
+  <div class="img-wrap d-flex align-items-stretch">
+  <div class="img align-self-stretch" style="background-image:url(http://st.depositphotos.com/1011643/1248/i/450/depositphotos_12485614-Asian-businesswoman-with-tablet-computer.jpg)"></div>
+  </div>
+  <div class="text pt-3 text-center">
+  <h3>Mitch Parker</h3>
+  <span class="position mb-2">English Teacher</span>
+  <div class="faded">
+  <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
+  
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="col-md-6 col-lg-3 ftco-animate fadeInUp ftco-animated">
+  <div class="staff">
+  <div class="img-wrap d-flex align-items-stretch">
+  <div class="img align-self-stretch" style="background-image:url(http://st.depositphotos.com/1011643/1248/i/450/depositphotos_12485614-Asian-businesswoman-with-tablet-computer.jpg)"></div>
+  </div>
+  <div class="text pt-3 text-center">
+  <h3>Stella Smith</h3>
+  <span class="position mb-2">Art Teacher</span>
+  <div class="faded">
+  <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
+ 
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="col-md-6 col-lg-3 ">
+  <div class="staff">
+  <div class="img-wrap d-flex align-items-stretch">
+  <div class="img align-self-stretch" style="background-image:url(http://ontarioacademy.com/wp-content/uploads/2019/02/Hamid-Khan-290x410.jpg)"></div>
+  </div>
+  <div class="text pt-3 text-center">
+  <h3>Monshe Henderson</h3>
+  <span class="position mb-2">Science Teacher</span>
+  <div class="faded">
+  <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
+  
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+    <br><br>
+<!-- Testimonial -->
+<section class="testimonial text-center">
+  <div class="container">
+
+      <div class="heading white-heading">
+          WHAT STUDENTS SAY
+      </div>
+      <div id="testimonial4" class="carousel slide testimonial4_indicators testimonial4_control_button thumb_scroll_x swipe_x" data-ride="carousel" data-pause="hover" data-interval="5000" data-duration="2000">
+       
+          <div class="carousel-inner" role="listbox">
+              <div class="carousel-item active">
+                  <div class="testimonial4_slide">
+                      <img src="https://media.istockphoto.com/photos/university-student-stock-images-picture-id1158958655?k=6&m=1158958655&s=612x612&w=0&h=CeJFQCY1G97DyS1eYbVO5fNPKAWOsy74Q--bK02Qo2k=" class="img-circle img-responsive" />
+                      <p>JMIT, Radaur is one of the premier institutes of engineering in haryana established in 1995 so its almost 2 decades this college has been there.</p>
+                      <h4>NITIN SHARMA</h4>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <div class="testimonial4_slide">
+                      <img src="https://media.istockphoto.com/photos/exam-preparation-stock-image-picture-id1025675134?k=6&m=1025675134&s=612x612&w=0&h=RfurXJYT48wU4QWGyK-QlffvICxm0DUZgXMetWC4LYM=" class="img-circle img-responsive" /><p>Best private college in haryana.. Better placements and learning growth... Management works for student wellfare by providing loans. </p>
+                      <h4>PRIYANK ARORA</h4>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <div class="testimonial4_slide">
+                      <img src="https://media.istockphoto.com/photos/smiling-businesswoman-at-work-picture-id1092806334?k=6&m=1092806334&s=612x612&w=0&h=QFciT2-ETPhrtXIdaSaBhMCK80qXkZ0gtBTvad_tQYw=" class="img-circle img-responsive" />
+                      <p> The reason behind preferring this college over others is its facilities and many more that can't be discussed.  </p>
+                      <h4>NIDHI SINGH</h4>
+                  </div>
+              </div>
+          </div>
+          <a class="carousel-control-prev" href="#testimonial4" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a class="carousel-control-next" href="#testimonial4" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+          </a>
+      </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<!-- cards -->
+
+
+
+
+
+
+<div class="row no-gutters">
+
+
+  <div class="col-md-3 d-flex services align-self-stretch py-5 px-4 " style="background-color: #FF8C00 ;box-shadow:2px 3px 8px #000000" data-aos="fade-down-right"  data-aos-duration="1000">
+  <div class="media block-6 d-block text-center" >
+  <div class="icon d-flex justify-content-center align-items-center">
+    <i class="fa fa-graduation-cap" aria-hidden="true" style='font-size:40px;color:white'></i>
+  </div>
+  <div class="media-body p-2 mt-3" >
+  <h3 class="heading" style="color: white;">Certified Teachers</h3>
+  <p style="color: #ffffff;"> Our Teacher are Well Qualified And Very Friendly.They are Amazing In Every Aspects.</p>
+  </div>
+  </div>
+  </div>
+
+
+  <div class="col-md-3 d-flex services align-self-stretch py-5 px-4 " style="background-color: #192f59; box-shadow:2px 3px 8px #000000" data-aos="fade-down-right"  data-aos-duration="1500">
+  <div class="media block-6 d-block text-center">
+  <div class="icon d-flex justify-content-center align-items-center">
+    <i class="fa fa-check" aria-hidden="true" style='font-size:40px;color:white'></i>
+
+
+  </div>
+  <div class="media-body p-2 mt-3">
+  <h3 class="heading" style="color: white;" >Special Education</h3>
+  <p style="color: white;">The teaching methodology has been empowered by the Smart Classes that have been made available in every department.</p>
+  </div>
+  </div>
+  </div>
+  <div class="col-md-3 d-flex services align-self-stretch py-5 px-4 " style="background-color: #FF8C00; box-shadow:2px 3px 8px #000000" data-aos="fade-down-right"  data-aos-duration="2000">
+  <div class="media block-6 d-block text-center">
+  <div class="icon d-flex justify-content-center align-items-center">
+    <i class="fa fa-book" aria-hidden="true" style='font-size:40px;color:white'></i>
+  </div>
+  <div class="media-body p-2 mt-3">
+  <h3 class="heading" style="color: white;">Book &amp; Library</h3>
+  <p style="color: white;"><br> <br>There are over 52565 books and about 3325 educational video cassettes & CDs with viewing facilities in the library.</p>
+  </div>
+  </div>
+  </div>
+  <div class="col-md-3 d-flex services align-self-stretch py-5 px-4 " style="background-color: #192f59 ;box-shadow:2px 3px 8px #000000" data-aos="fade-down-right"  data-aos-duration="2500">
+  <div class="media block-6 d-block text-center">
+  <div class="icon d-flex justify-content-center align-items-center">
+    <i class="fa fa-futbol-o" aria-hidden="true" style='font-size:40px;color:white'></i>
+  </div>
+  <div class="media-body p-2 mt-3">
+  <h3 class="heading" style="color: white;">Sport Clubs</h3>
+  <p style="color: white;">College has two very big open lush-green grounds within campus which are used by students for various sports like Cricket, Baseball, Football, Volleyball, BasketBall etc. </p>
+  </div>
+  </div>
+  </div>
+  </div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- gallery -->
+  <section class="work" id="works" style="background-image: url(https://media.istockphoto.com/vectors/abstract-gray-triangle-mosaic-background-design-vector-id1142692965?k=6&m=1142692965&s=612x612&w=0&h=EKdclbTgSyG46AdYeJNsSbaJ1zXUwk9dfM3oSrSdCCE=);padding-left: 40px; padding-right: 40px;"><br><br><br><br>
+
+<h1 style="text-align: center;"><b>GALLERY</b></h1>
+<br><br>
+    <div class="container-fluid">
+        <div class="row no-gutters">
+        <div class="col-md-3 col-sm-3 col-xs-3">
+            <div class="img-wrapper">
+            <a href="https://thumbs.dreamstime.com/b/college-students-using-digital-devices-concept-diverse-friends-85878768.jpg" target="_blank" title="image description will be here">
+                <img src="https://thumbs.dreamstime.com/b/college-students-using-digital-devices-concept-diverse-friends-85878768.jpg" class="img-responsive">
+                </a>
+            </div>
+            </div>
+            
+        <div class="col-md-3 col-sm-3 col-xs-3">
+            <div class="img-wrapper">
+            <a href="https://thumbs.dreamstime.com/b/students-university-multiracial-walking-hall-break-communicating-98008904.jpg" target="_blank" title="image description will be here">
+                <img src="https://thumbs.dreamstime.com/b/students-university-multiracial-walking-hall-break-communicating-98008904.jpg" class="img-responsive">
+                </a>
+            </div>
+            </div>
+            
+        <div class="col-md-3 col-sm-3 col-xs-3">
+            <div class="img-wrapper">
+            <a href="https://thumbs.dreamstime.com/b/excited-students-reading-good-news-classroom-side-view-three-together-line-laptop-sitting-desk-96426678.jpg" target="_blank" title="image description will be here">
+                <img src="https://thumbs.dreamstime.com/b/excited-students-reading-good-news-classroom-side-view-three-together-line-laptop-sitting-desk-96426678.jpg" class="img-responsive">
+                </a>
+            </div>
+            </div>
+            
+        <div class="col-md-3 col-sm-3 col-xs-3">
+            <div class="img-wrapper">
+            <a href="https://thumbs.dreamstime.com/b/group-diversity-college-students-learning-campus-indian-black-indonesian-people-57989535.jpg" target="_blank" title="image description will be here">
+                <img src="https://thumbs.dreamstime.com/b/group-diversity-college-students-learning-campus-indian-black-indonesian-people-57989535.jpg" class="img-responsive">
+                </a>
+            </div>
+            </div>
+            
+            <div class="col-md-3 col-sm-3 col-xs-3">
+            <div class="img-wrapper">
+            <a href="https://thumbs.dreamstime.com/b/high-school-students-taking-part-group-discussi-discussion-sitting-circle-using-laptops-digital-tablets-41541888.jpg" target="_blank" title="image description will be here">
+                <img src="https://thumbs.dreamstime.com/b/high-school-students-taking-part-group-discussi-discussion-sitting-circle-using-laptops-digital-tablets-41541888.jpg" class="img-responsive">
+                </a>
+            </div>
+            </div>
+            
+        <div class="col-md-3 col-sm-3 col-xs-3">
+            <div class="img-wrapper">
+            <a href="https://thumbs.dreamstime.com/b/group-high-school-students-running-corridor-towards-camera-smiling-41525110.jpg" target="_blank" title="image description will be here">
+                <img src="https://thumbs.dreamstime.com/b/group-high-school-students-running-corridor-towards-camera-smiling-41525110.jpg" class="img-responsive">
+                </a>
+            </div>
+            </div>
+            
+        <div class="col-md-3 col-sm-3 col-xs-3">
+            <div class="img-wrapper">
+            <a href="https://thumbs.dreamstime.com/b/students-thumbs-up-group-classroom-33175414.jpg" target="_blank" title="image description will be here">
+                <img src="https://thumbs.dreamstime.com/b/students-thumbs-up-group-classroom-33175414.jpg" class="img-responsive">
+                </a>
+            </div>
+            </div>
+            
+        <div class="col-md-3 col-sm-3 col-xs-3">
+            <div class="img-wrapper">
+            <a href="https://thumbs.dreamstime.com/b/college-students-walking-campus-group-happy-african-american-modern-39084590.jpg" target="_blank" title="image description will be here">
+                <img src="https://thumbs.dreamstime.com/b/college-students-walking-campus-group-happy-african-american-modern-39084590.jpg" class="img-responsive">
+                </a>
+            </div>
+            </div>
+            
+        </div>
+        </div>
+    </section>
+
+    <!-- fix button -->
+  
+<div class="btn-fixed">
+  <a href="/apply" style="color: white;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> &nbsp;Register Now</a>
+</div>
+<br>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="https://use.fontawesome.com/1744f3f671.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/jquery.magnific-popup.min.js" integrity="sha512-+m6t3R87+6LdtYiCzRhC5+E0l4VQ9qIT1H9+t1wmHkMJvvUQNI5MKKb7b08WL4Kgp9K0IBgHDSLCRJk05cFUYg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ <script>
+  $(document).ready(function(){
+     $('.counter-value').each(function(){
+         $(this).prop('Counter',0).animate({
+             Counter: $(this).text()
+         },{
+             duration: 3500,
+             easing: 'swing',
+             step: function (now){
+                 $(this).text(Math.ceil(now));
+             }
+         });
+     });
+ });
+ 
+
+
+ 
+ $(document).ready(function($) {
+        $('.work').magnificPopup({
+            type:'image',
+            delegate:'a',
+            gallery:{
+                enabled :true
+            }
+         });
+    });
+
+
+//testimonial
+
+
+ </script>
+{% endblock %}

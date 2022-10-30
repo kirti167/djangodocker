@@ -1,0 +1,273 @@
+{% extends 'header.html' %}
+{% load static %}
+{% block content %} <br>
+
+<style>
+.header{
+  height: 400px;
+  background-image: url(https://media.istockphoto.com/photos/laboratory-optical-microscope-blue-tone-picture-id828121026?k=6&m=828121026&s=612x612&w=0&h=mqKtnk6HV7D2qVYwLo1Cra2qMJYM-7BUIGzw7_mI-bo=);
+  background-size: 100% 100%;
+  text-align: right;
+}
+
+.heading{
+  
+  height: 100%;
+  
+  justify-content: right;
+  text-align: right;
+  margin-right: 6%;
+  color:white;
+  font-size: 50px;
+}
+
+.card-deck {
+  margin: 0 0px;
+  justify-content: space-between;
+}
+
+/* .card-deck .card {
+  margin:-50px -10px;
+} */
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .card-deck .card {
+    -ms-flex: 0 0 48.7%;
+    flex: 0 0 48.7%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .card-deck .card {
+    -ms-flex: 0 0 32%;
+    flex: 0 0 32%;
+  }
+}
+
+@media (min-width: 992px)
+{
+  .card-deck .card {
+    -ms-flex: 0 0 24%;
+    flex: 0 0 24%;
+  }
+}
+
+.card1 .card-body p h1 h3{
+  margin-top: 0;
+    margin-bottom: 1rem;
+    font-family: "Roboto",sans-serif;
+    color: rgb(121, 118, 118);
+}
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+
+.container1{
+  width: 80%;
+  margin: 0 auto;
+  display :flex;
+  justify-content:space-evenly;
+  flex-wrap:wrap;
+}
+
+.card{
+  margin : auto;
+  width: 350px;
+  overflow : hidden;
+  border-radius : 20px;
+  background : white;
+  margin-top:50px;
+  transition: all .2s;
+  box-shadow:5px 5px 15px rgba(0,0,0, .3);
+  height: 500px;
+}
+
+.card:hover {
+  box-shadow:5px 5px 25px rgba(0,0,0, .5);
+  transform: translate(-5px, -5px);
+}
+
+
+
+.img-cover{
+  position: relative;
+}
+
+.card img{
+  width: 350px;
+  height:250px;
+  object-fit:cover;
+}
+
+
+.desc{
+  padding : 1.5em ;
+  font-family: 'Poppins', sans-serif;
+}
+.desc h1{
+  display:inline;
+}
+.tdesc{
+  margin-bottom:40px;
+  width:100%;
+  height:50px;
+  
+}
+
+.desc a{
+  text-decoration: none;
+  background-color: dodgerblue;
+  padding: 15px 25px;
+  color:white;
+  border-radius: 15px;
+  display:block;
+  text-align: center;
+  transition: all .2s;
+}
+.desc a:hover{
+  background-color: SteelBlue;
+}
+
+.one{
+  margin-top: 0;
+    margin-bottom: 1rem;
+    font-family: "Roboto",sans-serif;
+    color: #777;
+    font-size: 18px;
+}
+
+
+</style>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;700;900&display=swap"
+rel="stylesheet"
+/>
+
+
+
+<section class="header">
+  <br><br><br><br> <br> <br> <br> <br>
+<center><div class="one"><p class="heading">Laboratories</p></div></center> <br><br><br> <br> <br>
+</section> <br><br>
+</section>
+
+
+<br>
+<!-- 
+<div class="container">
+  <div class="card-deck">
+    <div class="card">
+      <img class="card-img-top" src="https://d3nn873nee648n.cloudfront.net/900x600/11673/17-SM895078.jpg" alt="Card image cap">
+      <div class="card-body" style="background-color:yellow ;">
+        <h5 class="card-title">WIFI FACILITY</h5>
+        </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="https://d3nn873nee648n.cloudfront.net/900x600/12003/1-SM372107.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">VIRTUAL LABS</h5>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="https://d3nn873nee648n.cloudfront.net/900x600/3380/20-SM110791.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">FULLY INTERNET LABS</h5>
+        </div>
+    </div>
+    
+  </div>
+</div>
+
+
+<br><br><br> -->
+<div class="container"> <br>
+  <h1>Center of Excellence</h1>
+<p class="one">We, as Mukand group has a vision not to increase the quantity of degree holders but to produce skilled graduates with quality education to enable them to be a productive part of the Indian economy. Mukand group has taken initiative and established advanced labs with skilled resources for students as centres of excellence.Following are the centres of excellence running:</p></div>
+<div class="container1">
+ 
+  <div class="card"   data-aos="flip-left"  data-aos-duration="1000">
+    <div class="img-cover"><img src="http://mukand.org/downloads/nimages/centres-of-excellence.jpg">
+</div>
+    
+    <div class="desc">
+      <h1 style="color: #5e76bf;">Robotics</h1> <br>
+      <p><br>Arduino UNO to learn and apply various experiments and Projects using controllers like AVR, PIC etc <br></p>
+     
+    </div>
+  </div>
+  
+  <div class="card"   data-aos="flip-left"  data-aos-duration="1000">
+    <div class="img-cover"><img src="http://mukand.org/downloads/nimages/centres-of-excellence5.jpg">
+</div>
+    <div class="desc">
+      <h1 style="color: #5e76bf;">Daikin Air Conditioning</h1>
+      <p class="tdesc"> <br>
+        Exposure of advanced technologies in Heating, Ventilation, and Air Conditioning (HVAC) field.</p>
+      
+    </div>
+  </div>
+  
+  
+  <div class="card"   data-aos="flip-left"  data-aos-duration="1000">
+    <div class="img-cover"><img src="http://mukand.org/downloads/nimages/centres-of-excellence3.jpg">
+</div>
+    
+   <div class="desc">
+      <h1 style="color: #5e76bf;">Virtual Labs</h1> <br>
+      <p class="tdesc"> <br>To extend, improve, integrate, refine and assist the experimental learning</p>
+      
+    </div>
+  </div>
+  
+  
+  
+</div>
+  <br>
+  <div class="container1">
+ 
+    <div class="card"   data-aos="flip-left"  data-aos-duration="1000">
+      <div class="img-cover"><img src="http://mukand.org/downloads/nimages/centres-of-excellence2.jpg">
+  </div>
+      
+      <div class="desc">
+        <h1 style="color: #5e76bf;">Industrial Automation</h1> <br>
+        <p><br>Process Instrumentation & Industrial Automation<br></p>
+       
+      </div>
+    </div>
+    
+    <div class="card"   data-aos="flip-left"  data-aos-duration="1000">
+      <div class="img-cover"><img src="http://mukand.org/downloads/nimages/centres-of-excellence6.jpg">
+  </div>
+      <div class="desc">
+        <h1 style="color: #5e76bf;">Language Labs</h1>
+        <p class="tdesc"> <br>
+          The State-of-Art Audio-Visual equipments to help in imparting language skills to enhance communication & soft skills development activities.</p>
+        
+      </div>
+    </div>
+    
+    
+    <div class="card"   data-aos="flip-left"  data-aos-duration="1000">
+      <div class="img-cover"><img src="http://mukand.org/downloads/nimages/centres-of-excellence4.jpg">
+  </div>
+      
+     <div class="desc">
+        <h1 style="color: #5e76bf;">TIIC</h1> <br>
+        <p class="tdesc"> <br>Internet of Things (IoT) and
+          Analog Systems</p>
+        
+      </div>
+    </div>
+    
+    
+    
+  </div>
+  <br>
+{% endblock %}

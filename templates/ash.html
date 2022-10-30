@@ -1,0 +1,497 @@
+{% extends 'header.html' %}
+{% load static %}
+{% block content %}
+<style>
+    .site {
+  background-color: white;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+}
+
+
+
+
+/* =Content
+---------------------------*/
+.content-wrapper {
+  padding: 40px;
+}
+.site-content {
+  padding-bottom: 40px;
+  padding-right: 1%;
+  border-bottom: 1px dotted #999;
+}
+.sidebar {
+  padding-top: 45px;
+  font-size: 12px;
+  line-height: 21px;
+  text-align: left;
+}
+.widget {
+  padding-bottom: 10px;
+  text-decoration: none;
+    color: #291D25;
+
+    margin: 0;
+    font-weight: 400;
+   
+    padding: 0px 5px 0px 17px;
+}
+
+@media (min-width: 800px) {
+  .site-content {
+    width: 80%;
+    float: left;
+    border: none;
+  }
+  .sidebar {
+    width: 20%;
+    float: left;
+    padding-top: 4px;
+    text-align: left;
+  }
+  .widget {
+    padding-left: 20px;
+    text-decoration: none;
+    color: #291D25;
+   
+    margin: 0;
+    font-weight: 400;
+  
+    padding: 0px 5px 5px 17px;
+
+  }
+}
+/*footer*/
+    
+    table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;}
+
+    .footer-distributed{
+        background-color: #3253a8;
+        box-sizing: border-box;
+        width: 100%;
+        text-align: left;
+        font: bold 16px sans-serif;
+        padding: 50px 50px 60px 50px;
+        margin-top: 80px;
+    }
+    
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right{
+        display: inline-block;
+        vertical-align: top;
+    }
+    
+    /* Footer left */
+    
+    .footer-distributed .footer-left{
+        width: 30%;
+    }
+    
+    .footer-distributed h3{
+        color:  #ffffff;
+        font: normal 36px 'Cookie', cursive;
+        margin: 0;
+    }
+    
+    /* The company logo */
+    
+    .footer-distributed .footer-left img{
+        width: 30%;
+    }
+    
+    .footer-distributed h3 span{
+        color:  #e0ac1c;
+    }
+    
+    /* Footer links */
+    
+    .footer-distributed .footer-links{
+        color:  #ffffff;
+        margin: 20px 0 12px;
+    }
+    
+    .footer-distributed .footer-links a{
+        display:inline-block;
+        line-height: 1.8;
+        text-decoration: none;
+        color:  inherit;
+    }
+    
+    .footer-distributed .footer-company-name{
+        color:  #8f9296;
+        font-size: 14px;
+        font-weight: normal;
+        margin: 0;
+    }
+    
+    /* Footer Center */
+    
+    .footer-distributed .footer-center{
+        width: 35%;
+    }
+    
+    
+    .footer-distributed .footer-center i{
+        background-color:  #33383b;
+        color: #ffffff;
+        font-size: 25px;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 42px;
+        margin: 10px 15px;
+        vertical-align: middle;
+    }
+    
+    .footer-distributed .footer-center i.fa-envelope{
+        font-size: 17px;
+        line-height: 38px;
+    }
+    
+    .footer-distributed .footer-center p{
+        display: inline-block;
+        color: #ffffff;
+        vertical-align: middle;
+        margin:0;
+    }
+    
+    .footer-distributed .footer-center p span{
+        display:block;
+        font-weight: normal;
+        font-size:14px;
+        line-height:2;
+    }
+    
+    .footer-distributed .footer-center p a{
+        color:  #e0ac1c;
+        text-decoration: none;;
+    }
+    
+    
+    /* Footer Right */
+    
+    .footer-distributed .footer-right{
+        width: 30%;
+    }
+    
+    .footer-distributed .footer-company-about{
+        line-height: 20px;
+        color:  #92999f;
+        font-size: 13px;
+        font-weight: normal;
+        margin: 0;
+    }
+    
+    .footer-distributed .footer-company-about span{
+        display: block;
+        color:  #ffffff;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    
+    .footer-distributed .footer-icons{
+        margin-top: 25px;
+    }
+    
+    .footer-distributed .footer-icons a{
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+        background-color:  #33383b;
+        border-radius: 2px;
+    
+        font-size: 20px;
+        color: #ffffff;
+        text-align: center;
+        line-height: 35px;
+    
+        margin-right: 3px;
+        margin-bottom: 5px;
+    }
+    @media (max-width: 880px) {
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.footer-distributed .footer-center i{
+    margin-left: 0;
+}
+
+}
+    .carousel-inner{
+        height: 550px;
+    }</style>
+    <br>
+    <div class='container'> <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="http://127.0.0.1:8000/" style="text-decoration: none;">Home</a></li>
+          <li class="breadcrumb-item"><a href="/courses_offered/" style="text-decoration: none;">Courses Offered</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Applied Science and Humanities
+          </li>
+        </ol>
+      </nav></div>
+    <div class="site">
+        <div class="site-content" style="border-right: 1px dotted #9f9f9f;">
+   <h2><b>OBJECTIVE</b></h2><hr>
+   
+   
+
+
+   To equip students of engineering and technology with effective speaking and listening skills in English. <br>
+   To help them develop their soft skills and people skills, which will make the transition from college to workplace smoother and help them to excel in their jobs. <br>
+   To enhance students performance at Placement Interviews, Group Discussions and other recruitment exercises.
+<br>
+
+
+<br> 
+   <h2><b>ABOUT THE DEPARTMENT</b></h2><hr>
+
+
+  
+
+   Department cover the subjects/ areas of Applied Physics, Applied Chemistry, Mathematics, English and Communication Skills and Management. It has highly qualified faculty. It is in a position to supervise research leading to Ph.D degree. The equipment in the Applied Physics Laboratory includes, traveling microscopes, telescopes, spectrometer, sensitive galvanometer, Cathode ray oscilloscope, Hysteresis loop tracer, Hall effect set up, Four probe set up, Biquartz Polarimeter, Diffraction Grating, Sonometer, Thermionic Emmission kit etc. The equipment in the Applied Chemistry laboratory includes conductivity bridge, water analysis kit ( microprocessor based ) ph meter. Further, equipment like electronic balance, viscometer, flash point apparatus, penetrometer, hot air over, muffle furnace, electrical mantles, self-sufficient distillation apparatus etc. are available
+<br> <br>
+   <img src="{% static 'image/ash.jpg'%}"  height="200px" style="max-width: 100%;"> <br>
+  <br>
+  
+   
+
+ <br>
+<h2><b>Faculty</b></h2><hr>
+<div style="overflow-x: auto;">
+<table style="border: 1px solid #d3d3d3; border-collapse: collapse;" width="100%" cellspacing="0" cellpadding="3" border="1">
+    <tbody>
+    <tr>
+    <td class="tab_head" style="padding-left: 5px;" rowspan="2"><strong>S. No.</strong></td>
+    <td class="tab_head" style="padding-left: 5px;" rowspan="2"><strong>Name of The Teaching Faculty</strong></td>
+    <td class="tab_head" style="padding-left: 5px;" rowspan="2"><strong>Designation</strong></td>
+    <td class="tab_head" style="padding-left: 5px;" colspan="3"><strong>Qualification</strong></td>
+    </tr>
+    <tr>
+    <td class="tab_head" style="padding-left: 5px;">PG</td>
+    <td class="tab_head" style="padding-left: 5px;">Doctorate</td>
+    <td class="tab_head" style="padding-left: 5px;">University Aprroval No.</td>
+    </tr>
+    <tr>
+    <td style="padding-left: 5px;">1</td>
+    <td style="padding-left: 5px;">Dr. L.S. Reen</td>
+    <td style="padding-left: 5px;">HOD/ Professor (Mathematics)</td>
+    <td style="padding-left: 5px;">M.Sc., M.Phil.</td>
+    <td style="padding-left: 5px;">Ph.D</td>
+    <td style="padding-left: 5px;">CBA/166B/98/7865</td>
+    </tr>
+    <tr>
+    <td style="padding-left: 5px;">2</td>
+    <td style="padding-left: 5px;">Dr. Vandana Rani</td>
+    <td style="padding-left: 5px;">Professor (Economics)</td>
+    <td style="padding-left: 5px;">MBE</td>
+    <td style="padding-left: 5px;">Ph.D</td>
+    <td style="padding-left: 5px;">CBA/166B/99/12214</td>
+    </tr>
+    <tr>
+    <td style="padding-left: 5px;">3</td>
+    <td style="padding-left: 5px;">Dr. U.P. Singh</td>
+    <td style="padding-left: 5px;">Professor (Physics)</td>
+    <td style="padding-left: 5px;">M.Sc.</td>
+    <td style="padding-left: 5px;">Ph.D</td>
+    <td style="padding-left: 5px;">CBA/166B/2009/15237</td>
+    </tr>
+    <tr>
+    <td style="padding-left: 5px;">4</td>
+    <td style="padding-left: 5px;">Dr. Prerna Garg</td>
+    <td style="padding-left: 5px;">Asst. Prof. (Physics)</td>
+    <td style="padding-left: 5px;">M.Sc.</td>
+    <td style="padding-left: 5px;">Ph.D</td>
+    <td style="padding-left: 5px;">—</td>
+    </tr>
+    <tr>
+    <td style="padding-left: 5px;">5</td>
+    <td style="padding-left: 5px;">Dr. Niti Sakhuja</td>
+    <td style="padding-left: 5px;">Asst. Prof. (Chemistry)</td>
+    <td style="padding-left: 5px;">M.Sc.</td>
+    <td style="padding-left: 5px;">Ph.D</td>
+    <td style="padding-left: 5px;">CBA/166B/2013/15939</td>
+    </tr>
+    <tr>
+    <td style="padding-left: 5px;">6</td>
+    <td style="padding-left: 5px;">Dr. Vikas Bhardwaj</td>
+    <td style="padding-left: 5px;">Asst. Prof. (Chemistry)</td>
+    <td style="padding-left: 5px;">M.Sc.</td>
+    <td style="padding-left: 5px;">Ph.D</td>
+    <td style="padding-left: 5px;">CBA/166B/2013/15941</td>
+    </tr>
+    <tr>
+    <td style="padding-left: 5px;">7</td>
+    <td style="padding-left: 5px;">Ms. Charu Singla</td>
+    <td style="padding-left: 5px;">Asst. Prof. (PDP)</td>
+    <td style="padding-left: 5px;">MBA</td>
+    <td style="padding-left: 5px;">—</td>
+    <td style="padding-left: 5px;">CBA/166B/2018/16308</td>
+    </tr>
+    <tr>
+    <td style="padding-left: 5px;">8</td>
+    <td style="padding-left: 5px;">Ms. Shikha Benson</td>
+    <td style="padding-left: 5px;">Asst. Prof. (PDP)</td>
+    <td style="padding-left: 5px;">MBA</td>
+    <td style="padding-left: 5px;">—</td>
+    <td style="padding-left: 5px;">CBA/166B/2018/16308</td>
+    </tr>
+    <tr>
+    <td style="padding-left: 5px;">9</td>
+    <td style="padding-left: 5px;">Ms. Guneet Kaur</td>
+    <td style="padding-left: 5px;">Asst. Prof. (PDP)</td>
+    <td style="padding-left: 5px;">MBA</td>
+    <td style="padding-left: 5px;">—</td>
+    <td style="padding-left: 5px;">—</td>
+    </tr>
+    </tbody>
+    </table></div>
+    <br>
+    
+   <br> <br>
+   <h2><b>Syllabus</b></h2><hr>
+   <div style="overflow-x: auto;">
+   <table style="width:100%;border-collapse:collapse;" class="padding" cellspacing="0" cellpadding="0" bordercolor="#DDDDDD" border="1">
+    <tbody><tr>
+        <td class="trbg" width="80" align="center"><b>Sr. No.</b></td>
+        <td class="trbg"><b>Name</b></td>
+        <td class="trbg" width="110">&nbsp;</td>
+    </tr><tr>
+                    <td align="center">1</td>
+                    <td>Scheme CSE, IT, ECE, EE </td>
+                    <td><a href="downloads/files/n5fbcb0f1158d2.pdf" target="_blank" class="download">Download</a></td>
+                </tr><tr>
+                    <td align="center">2</td>
+                    <td>Scheme ME</td>
+                    <td><a href="downloads/files/n5fbcb0f1158d2.pdf" target="_blank" class="download">Download</a></td>
+                </tr><tr>
+                    <td align="center">3</td>
+                    <td>Syllabus Biology</td>
+                    <td><a href="downloads/files/n5fbcb10c33d9b.pdf" target="_blank" class="download">Download</a></td>
+                </tr><tr>
+                    <td align="center">4</td>
+                    <td>Syllabus Chemistry</td>
+                    <td><a href="downloads/files/n5fbcb16616b72.pdf" target="_blank" class="download">Download</a></td>
+                </tr><tr>
+                    <td align="center">5</td>
+                    <td>Syllabus Electromagnetic Theory </td>
+                    <td><a href="downloads/files/n5fbcb1938fd95.pdf" target="_blank" class="download">Download</a></td>
+                </tr><tr>
+                    <td align="center">6</td>
+                    <td>Syllabus Engineering Graphics &amp; Design </td>
+                    <td><a href="downloads/files/n5fbcb1a0d47f3.pdf" target="_blank" class="download">Download</a></td>
+                </tr><tr>
+                    <td align="center">7</td>
+                    <td>Syllabus Semiconductor Physics</td>
+                    <td><a href="downloads/files/n5fbcb1aa85fa4.pdf" target="_blank" class="download">Download</a></td>
+                </tr><tr>
+                    <td align="center">8</td>
+                    <td>Calculus and Ordinary Differential Equations </td>
+                    <td><a href="downloads/files/n5fbcb1b44b49f.pdf" target="_blank" class="download">Download</a></td>
+                </tr><tr>
+                    <td align="center">9</td>
+                    <td>Programming for Problem Solving</td>
+                    <td><a href="downloads/files/n5fbcb1c50c03b.pdf" target="_blank" class="download">Download</a></td>
+                </tr><tr>
+                    <td align="center">10</td>
+                    <td>Probability &amp; Statistics </td>
+                    <td><a href="downloads/files/n5fbcb1d01bdfb.pdf" target="_blank" class="download">Download</a></td>
+                </tr><tr>
+                    <td align="center">11</td>
+                    <td>Basic Electrical Engineering</td>
+                    <td><a href="downloads/files/n5fbcb1d981865.pdf" target="_blank" class="download">Download</a></td>
+                </tr></tbody></table></div>
+   
+</div>
+
+
+<div class="sidebar">
+           
+      
+           
+    <h3 class="widget widget-header"  style="border-bottom: 1px dotted #9f9f9f;">More Links</h3> <br>
+   <a href="/admission_procedure/" class='widget' >PROCEDURE</a>  <br>
+    
+    <a href="/courses_offered/" class='widget'>Courses Offered</a> <br> 
+    <a href="/cs/" class='widget'> &nbsp;&nbsp;-Computer Science</a> <br>
+    <a href="/it/" class='widget'> &nbsp;&nbsp;-Information Technology</a> <br>
+    <a href="/mech/" class='widget'> &nbsp;&nbsp;-Mechanical</a> <br>
+    <a href="/ece/" class='widget'> &nbsp;&nbsp;-Electronics and communication</a> <br>
+    <a href="/ele/" class='widget'> &nbsp;&nbsp;-Electrical</a> <br>
+    <a href="/ash/" class='widget'> &nbsp;&nbsp;-Applied Science and Humanities</a> <br>
+    <a href="/bba/" class='widget'> &nbsp;&nbsp;-Bachelor of Business Administration</a> <br>
+    <a href="/mba/" class='widget'> &nbsp;&nbsp;-Master of Business Administration</a> <br>
+    <a href="/bca/" class='widget'> &nbsp;&nbsp;-Bachelor of Computer Application</a> <br>
+    <a href="/mca/" class='widget'> &nbsp;&nbsp;-Master of Computer Application</a> <br>
+    <a href="/fees/" class='widget' >Fee Structure</a> <br>
+    <a href="/Epros/" class='widget' >E-Prospectus</a>
+ 
+</div><!-- .sidebar -->
+</div>
+
+
+
+
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+     
+            <h3>About<span>JMIT</span></h3>
+    
+            <p class="footer-links">
+                <a href="http://127.0.0.1:8000/">Home</a>
+                |
+                <a href="#">About</a>
+                |
+                <a href="#">Contact</a>
+            </p>
+    
+          
+        </div>
+    
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                  <p><span></span>
+                    Radaur-135133
+                    (Distt. Yamuna Nagar)<br>
+                    Haryana </p>
+            </div>
+    
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>01732-283700, 283800</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:director@jmit.ac.in">director@jmit.ac.in</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>About the College</span>
+                We offer training and skill building courses across Technology, Design, Management, Science and Humanities.</p>
+            <div class="footer-icons">
+                <a href="https://www.facebook.com/jmitinstitute/"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com/jmitcollege?lang=en"><i class="fab fa-twitter"></i></a>
+          
+                <a href="https://in.linkedin.com/school/seth-jai-prakash-mukand-lal-institute-of-engineering-&-technology-jmit-/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.youtube.com/c/JmitCollege/videos?app=desktop&view=0&sort=dd&shelf_id=1"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+    {% endblock %}

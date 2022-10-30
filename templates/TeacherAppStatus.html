@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block main_content %}
+<section class="content">
+  <div class="container-fluid">
+                <div class="row">
+          <div class="col-md-12">
+        <!-- general form elements -->
+        <div class="card card-primary">
+          <div class="card-header">
+            <h3 class="card-title">Response of applied leave</h3>
+          </div>
+          <center>
+                {% for s in app %}
+
+                {% if s.status == 'reject' %}
+                <p style="margin-top:15px;"><b style="color:red;">Application leave has been {{ s.status }}ed by {{s.to_admin}} </b></p>
+
+                {% elif s.status == 'accept' %}
+                <p style="margin-top:15px;"><b style="color: green;">Application leave has been {{ s.status }}ed by {{s.to_admin}} </b></p>
+
+                {% elif s.status == None %}
+                <p style="margin-top:15px;"><b>Application leave is not responded yet by {{s.to_admin}} </b></p>
+
+                {% endif %}
+
+                
+
+                {% endfor %}
+              </center>
+              <br>
+              </div>
+              </div>
+              </div>
+              </div>
+              </section>
+            
+{% endblock main_content %}

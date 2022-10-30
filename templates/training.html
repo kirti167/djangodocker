@@ -1,0 +1,305 @@
+{% extends 'header.html' %}
+{% load static %}
+{% block content %}
+<style>/*footer*/
+        .site {
+  background-color: white;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+}
+
+
+
+
+/* =Content
+---------------------------*/
+.content-wrapper {
+  padding: 40px;
+}
+.site-content {
+  padding-bottom: 40px;
+  padding-right: 2%;
+  border-bottom: 1px dotted #999;
+}
+.sidebar {
+  padding-top: 40px;
+  font-size: 12px;
+  line-height: 21px;
+  text-align: left;
+}
+.widget {
+  padding-bottom: 10px;
+  text-decoration: none;
+    color: #291D25;
+
+    margin: 0;
+    font-weight: 400;
+   
+    padding: 0px 5px 0px 17px;
+}
+
+@media (min-width: 800px) {
+  .site-content {
+    width: 80%;
+    float: left;
+    border: none;
+  }
+  .sidebar {
+    width: 20%;
+    float: left;
+    padding-top: 0;
+    text-align: left;
+  }
+  .widget {
+    padding-left: 20px;
+    text-decoration: none;
+    color: #291D25;
+   
+    margin: 0;
+    font-weight: 400;
+  
+    padding: 0px 5px 5px 17px;
+
+  }
+}
+    .footer-distributed{
+        background-color: #3253a8;
+        box-sizing: border-box;
+        width: 100%;
+        text-align: left;
+        font: bold 16px sans-serif;
+        padding: 50px 50px 60px 50px;
+        margin-top: 80px;
+    }
+    
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right{
+        display: inline-block;
+        vertical-align: top;
+    }
+    
+    /* Footer left */
+    
+    .footer-distributed .footer-left{
+        width: 30%;
+    }
+    
+    .footer-distributed h3{
+        color:  #ffffff;
+        font: normal 36px 'Cookie', cursive;
+        margin: 0;
+    }
+    
+    /* The company logo */
+    
+    .footer-distributed .footer-left img{
+        width: 30%;
+    }
+    
+    .footer-distributed h3 span{
+        color:  #e0ac1c;
+    }
+    
+    /* Footer links */
+    
+    .footer-distributed .footer-links{
+        color:  #ffffff;
+        margin: 20px 0 12px;
+    }
+    
+    .footer-distributed .footer-links a{
+        display:inline-block;
+        line-height: 1.8;
+        text-decoration: none;
+        color:  inherit;
+    }
+    
+    .footer-distributed .footer-company-name{
+        color:  #8f9296;
+        font-size: 14px;
+        font-weight: normal;
+        margin: 0;
+    }
+    
+    /* Footer Center */
+    
+    .footer-distributed .footer-center{
+        width: 35%;
+    }
+    
+    
+    .footer-distributed .footer-center i{
+        background-color:  #33383b;
+        color: #ffffff;
+        font-size: 25px;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 42px;
+        margin: 10px 15px;
+        vertical-align: middle;
+    }
+    
+    .footer-distributed .footer-center i.fa-envelope{
+        font-size: 17px;
+        line-height: 38px;
+    }
+    
+    .footer-distributed .footer-center p{
+        display: inline-block;
+        color: #ffffff;
+        vertical-align: middle;
+        margin:0;
+    }
+    
+    .footer-distributed .footer-center p span{
+        display:block;
+        font-weight: normal;
+        font-size:14px;
+        line-height:2;
+    }
+    
+    .footer-distributed .footer-center p a{
+        color:  #e0ac1c;
+        text-decoration: none;;
+    }
+    
+    
+    /* Footer Right */
+    
+    .footer-distributed .footer-right{
+        width: 30%;
+    }
+    
+    .footer-distributed .footer-company-about{
+        line-height: 20px;
+        color:  #92999f;
+        font-size: 13px;
+        font-weight: normal;
+        margin: 0;
+    }
+    
+    .footer-distributed .footer-company-about span{
+        display: block;
+        color:  #ffffff;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    
+    .footer-distributed .footer-icons{
+        margin-top: 25px;
+    }
+    
+    .footer-distributed .footer-icons a{
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+        background-color:  #33383b;
+        border-radius: 2px;
+    
+        font-size: 20px;
+        color: #ffffff;
+        text-align: center;
+        line-height: 35px;
+    
+        margin-right: 3px;
+        margin-bottom: 5px;
+    }
+    @media (max-width: 880px) {
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.footer-distributed .footer-center i{
+    margin-left: 0;
+}
+
+}
+    .carousel-inner{
+        height: 550px;
+    }
+    .one{
+  margin-top: 0;
+    margin-bottom: 1rem;
+    font-family: "Roboto",sans-serif;
+    color: #777;
+    font-size: 18px;
+}
+    
+.animate {
+  border-right: solid 3px #FC6D6D;
+  white-space: nowrap;
+  overflow: hidden;    
+  font-family: 'Poppins', sans-serif;
+  font-size: 9vh;
+  color: #192f59;
+  vertical-align: middle 
+ 
+}
+      /* Animation */
+.animate{
+  animation: animated-text 3s steps(29,end) 1s 1 normal both,
+             animated-cursor 500ms steps(29,end) infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 320px;}
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor{
+  from{border-right-color: #FC6D6D;}
+  to{border-right-color: transparent;}
+}
+    </style>
+    <br>
+    
+
+    <div class="container">
+    <h1 class="animate">Training Cell</h1>
+    
+<br>
+        <p class="one" data-aos="fade-right"  data-aos-duration="1000">
+
+            In last few years JMIT had developed itself as a preferred destination for campus recruitment. Companies are in constant need for skilled engineers. To resolve the problem of employability and reduce the ever growing need of trained manpower, recruiting companies have started expecting trained students right from their days at engineering college especially from the colleges closely associated with them like JMIT. <BR></BR>
+            
+            After many discussions & brain storming sessions with companies and students, we are able to work out the possibility to develop an industry ready program for students as per the demands of tech majors.</p>
+            <br> <br>  <p class="one" data-aos="fade-right"  data-aos-duration="1000">
+            Major Objective of the program: <br>
+            – In sync with selection process of majority of visiting companies <br>
+            – Training as per demand of tech majors <br>
+            – Conceptual clarity of basics <br>
+            – Practical orientation to develop employable professionals <br>
+            – Support students to get selected after proper readiness sessions <br> <br><br>
+        </p>
+        <p class="one" data-aos="fade-right"  data-aos-duration="1000">
+            Once trained, these students have a better chance to clear the interviews of companies and our focus is to ensure an employable fresher with special skills so that by the time these students graduate from college, they are ready to be on the job and ready to join the industry. <br>
+            <br>
+            The focus on skill development & employability enhancements starts from the first semester itself and gradually picks the speed over a period of time.
+            <br>
+            -There are regular classroom sessions on communication skills. <br>
+            -To improve communication skills students are guided to become a part of activities like extempore, presentations, debates, declamation, seminars, conferences etc. <br>
+            -Group Discussion sessions are also regularly planned. <br>
+            -To develop logical thinking, aptitude classes are regularly conducted. <br></p>
+         
+            <p class="one" data-aos="fade-right"  data-aos-duration="1000">
+            For more information, students can get in touch with their department coordinators.
+            </p>
+    </div>
+ </div>
+    {% endblock %}

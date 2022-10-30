@@ -1,0 +1,97 @@
+{% extends 'header.html' %}
+{% load static %}
+{% block content %}
+<style>
+           .one{
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-family: "Roboto",sans-serif;
+    color: #777;
+    
+
+  }
+    
+  .animate {
+  border-right: solid 3px #FC6D6D;
+  white-space: nowrap;
+  overflow: hidden;    
+  font-family: 'Poppins', sans-serif;
+  font-size: 9vh;
+  color: #192f59;
+  vertical-align: middle 
+ 
+}
+      /* Animation */
+.animate{
+  animation: animated-text 3s steps(29,end) 1s 1 normal both,
+             animated-cursor 500ms steps(29,end) infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 200px;}
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor{
+  from{border-right-color: #FC6D6D;}
+  to{border-right-color: transparent;}
+}
+  </style>
+    <br>
+
+    <div class='container'>
+    
+
+    <h1 class="animate">ED Cell</h1>
+  <br>
+<h5 data-aos="fade-right"  data-aos-duration="1000">About Us</h5>
+<p class="one" data-aos="fade-right"  data-aos-duration="1000">Rain water accumulated on the roof top without an outlet, shall bring down the roof. Likewise, wealth without charity will ruin the household of weathy.” :- Seth Jai Parkash <br><br>
+
+    Believing on this philosophy, we have always aimed to reach out and give back to the community so also the society as a whole. The Entrepreneurship Development Cell of JMIT was officially established in the year 2006 as a step forward to achieve this goal. The fundamentals underneath were to help our society and economy by creating job generators. <br><br>
+    </p>
+    <h4 data-aos="fade-right"  data-aos-duration="1000">Objectives</h4>
+  <p class="one" data-aos="fade-right"  data-aos-duration="1000"> The ED cell has been established with the following objectives; <br>
+    
+    To create a culture of innovation-driven entrepreneurship <br>
+    To act as an information center for planning/registering and executing business ideas through student projects <br>
+    To build a nexus of alumni-entrepreneurs, current students, industries and policy makers <br>
+    Provide business incubation to early stage entrepreneurs <br>
+    </p>
+
+    <h4 data-aos="fade-right"  data-aos-duration="1000">Functions of EDC</h4>
+    <p class="one" data-aos="fade-right"  data-aos-duration="1000">
+        • Provide consultation/ useful information on MSME Registration/ loan schemes/ business plan framework/ government policies and incubation facilities for setting up new ventures <br>
+• Create awareness about social entrepreneurs <br>
+• Organize interactive sessions with alumni entrepreneurs <br>
+• Communication of useful information shared by our partners (CII/NEN/AAJR) to our students <br>
+• Training programs on entrepreneurship & skill development <br>
+• Conduct webinars from NEN <br>
+• Arrange student visits to operational SMEs and Incubation centers <br>
+• Communicate governments initiatives and schemes (like start-up India/Skill India) to the students <br>
+    </p>
+
+    <h4 data-aos="fade-right"  data-aos-duration="1000">Incubator - MSIR</h4>
+    <p class="one" data-aos="fade-right"  data-aos-duration="1000">
+        Mukand Startup Incubator Radaur (MSIR) is an endeavor of Seth Jai Parkash Mukand Lal Institute of Engineering and Technology ( JMIT) , Radaur , Yamuna Nagar . MSIR is leading the effort to create a technical incubator to foster entrepreneurship on the campus as well as the surrounding region and enhance learning of the students.
+
+        The reason behind the incubator is to stimulate the establishment and growth of technology-based start-up companies and other compatible businesses. By fulfilling this mission, the incubator would contribute to job creation, and provide for enhanced economic health to the region.
+
+    </p>
+    <h6 data-aos="fade-right"  data-aos-duration="1000">
+        The objectives of MSIR are : </h6>
+    <p class="one" data-aos="fade-right"  data-aos-duration="1000">
+        a. To orient and motivate students to start their own business. <br>
+         b. To provide support to students for launching their startups during the course of their study. <br>
+          c. To equip students with the necessary skills for managing their business enterprise. <br>
+           d. To orient students to establish ventures that will address social issues. <br>
+
+    </p>
+ 
+      
+      </div>
+    
+    {% endblock %}

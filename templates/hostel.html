@@ -1,0 +1,235 @@
+{% extends 'header.html' %}
+{% load static %}
+{% block content %}
+<style>.one{
+  height: 80%;
+  display: flex;
+  justify-content: center;
+
+  margin-top: 0%;
+  margin-bottom: 100px;
+  padding-top: 6px;
+}
+.animate {
+  
+  white-space: nowrap;
+  overflow: hidden;    
+  font-family: 'Poppins', sans-serif;
+  font-size: 9vh;
+  color: white;
+ 
+ 
+}
+
+/* table */
+
+table {
+  border: 1px #a39485 solid;
+  font-size: .9em;
+  box-shadow: 0 2px 5px rgba(0,0,0,.25);
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+th {
+  text-align: left;
+}
+  
+thead {
+  font-weight: bold;
+  color: #fff;
+  background: #192f59;
+}
+  
+ td, th {
+  padding: 1em .5em !important;
+  vertical-align: middle;
+}
+  
+ td {
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  background: #fff;
+}
+
+
+ @media all and (max-width: 768px) {
+    
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  
+  th {
+    text-align: right;
+  }
+  
+  table {
+    position: relative; 
+    padding-bottom: 0;
+    border: none;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+  }
+  
+  thead {
+    float: left;
+    white-space: nowrap;
+  }
+  
+  tbody {
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    white-space: nowrap;
+  }
+  
+  tr {
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  th {
+    border-bottom: 1px solid #a39485;
+  }
+  
+  td {
+    border-bottom: 1px solid #e5e5e5;
+  }
+  
+  
+  }
+  
+
+  .two{
+  margin-top: 0;
+    margin-bottom: 1rem;
+    font-family: "Roboto",sans-serif;
+    color: #777;
+    font-size: 18px;
+}
+</style>
+
+<br>
+<section style="background-color: cornsilk;background-image: url(https://p1.pxfuel.com/preview/802/154/558/hostel-youth-hostel.jpg);background-repeat:no-repeat;  background-size: 1400px 500px;height: 500px;max-width: 100%;" >
+  <br><br><br><br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+
+</section> <br><br>
+ <div class="container">
+
+<p class="two">
+  JMIT Campus has separate hostels for boys and girls with all modern facilities and attached mess.The hostel rooms are fully equipped with adequate furniture & fixtures. The hostel mess serves fresh and hygienic food. 24 Hour Power backup is available in the hostel. You will be provided with facilities like internet, and common room with TV & cable facility and a study room, magazines, etc. The hostels’ houses have a fully equipped gym and separate courts for  BasketBall, and Badminton. The concerned and highly-experienced staff looks after the college assets and ensures that the hostel remains responsive all the time. Each hostel is managed by a full time warden working under the guidance of a Chief Warden.</p>
+<br>
+
+<!-- 
+    <img src="{% static 'image/hostel1.png' %}" style="width:450px;height:320px;max-width: 100%;">
+
+  &nbsp;
+<img src="{% static 'image/hostel2.jpg' %}" style="width:450px;height:320px;max-width: 100%;">
+  <br>
+<br><p class="two">
+JMIT Campus has separate hostels for boys and girls with all modern facilities and attached mess.The hostel rooms are fully equipped with adequate furniture & fixtures. The hostel mess serves fresh and hygienic food. 24 Hour Power backup is available in the hostel. You will be provided with facilities like internet, and common room with TV & cable facility and a study room, magazines, etc. The hostels’ houses have a fully equipped gym and separate courts for  BasketBall, and Badminton. The concerned and highly-experienced staff looks after the college assets and ensures that the hostel remains responsive all the time. Each hostel is managed by a full time warden working under the guidance of a Chief Warden.</p>
+<br> -->
+<br>
+<section class="section about">
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-lg-4 col-sm-6">
+				<div class="about-img">
+					<img src="https://appliedscienceggi.files.wordpress.com/2018/10/img_20180731_201711197-2.jpg?w=840" alt="" class="img-fluid" height="400px" width="350px">
+					<img src="https://www.juit.ac.in/front/images/gymnesium1.jpg" alt="" class="img-fluid mt-4" height="600px">
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6">
+				<div class="about-img mt-4 mt-lg-0" style=" border-radius: 5px;
+        box-shadow: 0px 0px 30px 0px rgba(0, 42, 106, 0.1);">
+					<img src="https://cache.careers360.mobi/media/presets/500X333/colleges/social-media/media-gallery/3210/2018/8/8/Seth-Jai-Parkash-Mukand-Lal-Institute-of-Engineering-and-Technology-Yamunanagar18.jpg" alt="" class="img-fluid">
+				</div>
+			</div>
+			<div class="col-lg-4">
+				<div class="about-content pl-4 mt-4 mt-lg-0">
+					<h2 class="title-color">Hostels-Home Away From Home</h2>
+					<p class="two">Choosing a College is also about choosing a new home. We ensure that students dwell in a healthy environment that helps them to grow and learn without any obstacle.</p>
+
+			
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<br>
+<table>
+<tr>
+
+<thead>
+  <th>Name of Hostel</th>
+  <th>AC Rooms</th>
+  <th>Non AC Rooms</th>
+  <th>Total</th></tr></thead>
+  <tr>
+  <td>Padmavati Bhawan – Girls</td>
+  <td>144</td>
+  <td>337</td>
+  <td>481</td>
+  </tr>
+  <tr>
+  <td>Ved Bhawan, Jagat Bhawan – Boys</td>
+  <td>140</td>
+  <td>234</td>
+  <td>374</td>
+  </tr>
+  <tr>
+  <td>New Boys Hostel</td>
+  <td>30</td>
+  <td>113</td>
+  <td>143</td>
+  </tr>
+  <tr>
+  <td>Hostel at JMIETI</td>
+  <td>68</td>
+  <td>108</td>
+  <td>176</td>
+  </tr>
+
+
+
+
+
+
+</table>
+<br>
+
+<h4><strong>HOSTEL FEE STRUCTURE</strong></h4>
+<table>
+<tr>
+
+<thead>
+  <th>S.NO</th>
+  <th>Particulars</th>
+  <th>Non AC Room (including amenities)</th>
+  <th>AC Room*</th></tr></thead>
+  <tr>
+  <td>1</td>
+  <td>Triple Seater Hostel</td>
+  <td>27000/-</td>
+  <td>31000/-</td>
+  </tr>
+  <tr>
+  <td>2</td>
+  <td>Double Seater Hoste</td>
+  <td>29000/-</td>
+  <td>35000/-</td>
+  </tr>
+  <tr>
+  <td>3</td>
+  <td> 	Single Seater Hostel</td>
+  <td>33000/-</td>
+  <td>40000/-</td>
+  </tr>
+  </table>
+  <br>
+  (One time refundableas security of Rs. 2000/- is not included in the hostel fee)<br>
+  * The schedule and days for the utilization of air-conditioners will be notified in due course.<br><br>
+</div> 
+
+
+{% endblock %}

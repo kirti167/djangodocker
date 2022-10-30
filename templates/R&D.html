@@ -1,0 +1,199 @@
+{% extends "header.html" %}
+{% load static %}
+{% block content %}
+<style>
+    
+
+table {
+  border: 1px #a39485 solid;
+  font-size: .9em;
+  box-shadow: 0 2px 5px rgba(0,0,0,.25);
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 5px;
+  overflow: hidden;
+  background: linear-gradient(90deg,  #e0f2f8  , #ffffff );
+}
+
+th {
+  text-align: left;
+}
+  
+thead {
+  font-weight: bold;
+  color: #fff;
+  background: #192f59;
+}
+  
+ td, th {
+  padding: 1em .5em;
+  vertical-align: middle;
+}
+  
+ td {
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  
+}
+
+
+ @media all and (max-width: 768px) {
+    
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  
+  th {
+    text-align: right;
+  }
+  
+  table {
+    position: relative; 
+    padding-bottom: 0;
+    border: none;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+  }
+  
+  thead {
+    float: left;
+    white-space: nowrap;
+  }
+  
+  tbody {
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    white-space: nowrap;
+  }
+  
+  tr {
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  th {
+    border-bottom: 1px solid #a39485;
+  }
+  
+  td {
+    border-bottom: 1px solid #e5e5e5;
+  }
+  
+  
+  }
+
+  .one{
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-family: "Roboto",sans-serif;
+    color: #777;
+    
+
+  }
+  
+</style>
+
+
+<br>
+<br>
+<div class='container'> 
+
+    
+            <h1 data-aos="fade-right"  data-aos-duration="1000">Research and development</h1>
+<p class="one" data-aos="fade-right"  data-aos-duration="1000">Research and development is starting of the innovation life cycle that may end with development of a commercial product. It enables students to plan and execute a work by formulating a research problem under faculty guidance. Thefaculty and students work on a research problem and possibly results into a Research Paper, Patent or a Publication. This helps to develop critical thinking abilities and problem solving for the real world in the students. The process of research and development starts with a literature survey,continues with analysisaccompanied by experiments and concludes with results. JMIT provides this unique opportunity to the students to work in thrust areas of science and engineering under the expert guidance and develop the technologies for a better future.</p>
+
+<h4 data-aos="fade-right"  data-aos-duration="1000">PROJECTS:</h4>
+<br>
+
+<table data-aos="fade-right"  data-aos-duration="1000">
+    <thead>
+    <tr>
+    <th>S.No.</th>
+    <th><strong>Students</strong></th>
+    <th><strong>Project</strong></th>
+    <th><strong>Abstract</strong></th>
+    <th><strong>Guide</strong></th>
+    </tr></thead>
+    <tbody>
+    <tr>
+    <td>1</td>
+    <td>Shubham Pathania (1215791)<br>Shivam Suneja (1214753)<br>Prateek Rawat (1214741)</td>
+    <td>Harmonic Analysis of a Three-Phase Converter using MATLAB and SIMULINK</td>
+    <td>The project uses MATLAB/SIMULINK to develop a model of 3-Phase convertor and analyse the harmonics in the output received from it after filtering. The three filters analysed are L, C and LC. It was found from the analysis that the LC filters provide similar results with lower values of L &amp; C.</td>
+    <td>Dr. Nidhika Birla</td>
+    </tr>
+    <tr>
+    <td>2</td>
+    <td>Rajat Sharma (1214746)<br>Jony Saini (1214728)<br>Rahul Godara (1214745)</td>
+    <td>Characteristic study of PID Controller in MATLAB</td>
+    <td>The project uses MATLAB/ SIMULINK to develop the model of a DC Motor and analyse its characteristics for PID controller. It was found that the controller tuned using Closed Loop Technique provide the best transient response.</td>
+    <td>Dr. Nidhika Birla</td>
+    </tr>
+    <tr>
+    <td>3</td>
+    <td>Akhil Vohra (1214726)<br>Ajay Kumar (1214704)<br>Ajay Kumar (1214706)</td>
+    <td>Simulation of Electrical Vehicle using MATLAB</td>
+    <td>The project develops a mathematical model of the Electrical Vehicle using MATLAB/SIMULINK. The output of the various parts of the model are analysed and compared with the standard results.</td>
+    <td>Dr. Nidhika Birla</td>
+    </tr>
+    <tr>
+    <td>4</td>
+    <td>Akhil Vohra (1214726)<br>Ajay Kumar (1214704)</td>
+    <td>Design of Sending &amp; Receiving End Power Circle Diagram using MATLAB</td>
+    <td>This project implements the automated design of Sending &amp; Receiving End Power Circle Diagram used in Transmission Line Design. The design automation is implemented using MATLAB programming.</td>
+    <td>Dr. Nidhika Birla</td>
+    </tr>
+    <tr>
+    <td>5</td>
+    <td>Deepak Kumar (1214721)<br>Arvind Kumar (1214717)<br>Ashmit Ghai (1214719)<br>Akshay Tanwar (1214711)</td>
+    <td>Stepper Motor Control using MATLAB</td>
+    <td>The project demonstrates a wired real-time interfacing of parallel port using MATLAB &amp; Stepper Motor. The speed control of motor is completed by controlling the delay time using programming.</td>
+    <td>Dr. Nidhika Birla</td>
+    </tr>
+    <tr>
+    <td>6</td>
+    <td>Shubham Pathania (1215791)<br>Shivam Suneja (1214753)<br>Prateek Rawat (1214741)</td>
+    <td>DC Motor Speed and Direction Control using MATLAB</td>
+    <td>The project demonstrates a wired real-time interfacing of parallel port using MATLAB &amp; DC Motor. The speed control of motor is completed by using PWM technique in programming &amp; direction control is accomplished by changing the signal sequence in software.</td>
+    <td>Dr. Nidhika Birla</td>
+    </tr>
+    <tr>
+    <td>7</td>
+    <td>Gurpreet, Gautam (ECE -4th Year)</td>
+    <td>Media Player Control using Image Processing</td>
+    <td>The project demonstrates the use of image processing for media player control using ActiveX commands in MATLAB.</td>
+    <td>Dr. Nidhika Birla</td>
+    </tr>
+    <tr>
+    <td>8</td>
+    <td>Jai (1215711)<br>Sunil (1215727)<br>Gourav (1216786)</td>
+    <td>DC motor interfacing with Parallel Port using MATLAB</td>
+    <td>The project demonstrates a wireless real-time interfacing of parallel port using MATLAB. In this project, a Graphical User Interface (GUI) is developed on the MATLAB platform. The parallel port is connected to the DC motor. The signals to the motor varies the motor direction &amp; speed.</td>
+    <td>Dr. Nidhika Birla</td>
+    </tr>
+    <tr>
+    <td>9</td>
+    <td>Jai (1215711)<br>Sunil (1215727)<br>Gourav (1216786)</td>
+    <td>Wireless Interfacing of Parallel Port using MATLAB</td>
+    <td>The project demonstrates a wireless real-time interfacing of parallel port using MATLAB. It uses the parallel port of the PC, MATLAB software, RF Transmitter, RF Receiver and LED board.</td>
+    <td>Dr. Nidhika Birla</td>
+    </tr>
+    <tr>
+    <td>10</td>
+    <td>Avinash (1213715)<br>Amandeep (1213708)<br>Pradeep (1214787)</td>
+    <td>Design Receving End Power Circle Diagram By Using MATLAB</td>
+    <td>This project implements the automated design of Receiving End Power Circle Diagram used in Transmission Line Design. The design automation is implemented using MATLAB programming.</td>
+    <td>Dr. Nidhika Birla</td>
+    </tr>
+    <tr>
+    <td>11</td>
+    <td>Amandeep (1213707)<br>Jai (1215711)<br>Sunil (1215727)<br>Gourav (1216786)</td>
+    <td>Real Time Interfacing of Parallel Port using MATLAB</td>
+    <td>The project demonstrates a wired real-time interfacing of parallel port using MATLAB. In this project, a Graphical User Interface (GUI) is developed on the MATLAB platform and an LED board is designed on PCB. The parallel port is connected to the LED board using connecting cable. The LED board contains 8 LEDs to verify the signal received from the 8 pins of the parallel port driven using GUI.</td>
+    <td>Dr. Nidhika Birla</td>
+    </tr>
+    </tbody>
+    </table></div></div></div>
+   <br>
+
+
+{% endblock %}

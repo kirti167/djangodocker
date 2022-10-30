@@ -1,0 +1,116 @@
+{% load static %}
+<html lang="en">
+    <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&amp;display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="fonts,_icomoon,_style.css+css,_owl.carousel.min.css+css,_bootstrap.min.css+css,_style.css.pagespeed.cc.Gajl4v2LrE.css">
+    <link rel="shortcut icon" class = "img-responsive" type="image/ico" href="{% static 'image/newlogo.ico' %}">
+    
+    <title>JMIT</title>
+    <style>
+        input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].btn-block {
+    width: 100%;
+}
+.content .btn {
+    height: 54px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+}
+.btn-block {
+    display: block;
+    width: 100%;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #6c63ff;
+    border-color: #6c63ff;
+}
+.content .contents .form-group.first, .content .bg .form-group.first {
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}.content .contents .form-control, .content .bg .form-control {
+    border: none;
+    padding: 0;
+    font-size: 15px;
+    border-radius: 0;
+}
+.content .contents .form-group, .content .bg .form-group {
+    overflow: hidden;
+    margin-bottom: 0;
+    padding: 15px 15px;
+    position: relative;
+    background: #edf2f5;
+    
+}
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f8fafb;
+}
+
+
+    *, :after, :before {
+    /* -webkit-box-sizing: border-box; */
+    box-sizing: border-box;
+}
+div {
+    display: block;
+}
+
+body {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+}
+    </style>
+    </head>
+    <body style="background-color: #f8fafb;">
+    <div class="content">
+    <div class="container">
+    <div class="row">
+    <div class="col-md-6">
+    
+    <img src="{% static 'image/undraw_remotely_2j6y.svg' %}" alt="Image" class="img-fluid" data-pagespeed-url-hash="4289692523" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" style="margin-top: 15%;">
+    </div>
+    <div class="col-md-6 contents">
+    <div class="row justify-content-center">
+    <div class="col-md-8">
+    <div class="mb-4">
+    <h2 style="margin-top: 34%;">Sign In</h2>
+    <p class="mb-4" style="color: #b3b3b3;">Registered students and teachers can sign in here.</p>
+    </div>
+    <form method="post"  >
+        {% csrf_token %}
+    <div class="form-group first" >
+    
+    <input type="email" class="form-control" style="padding: 15px;background: #edf2f5;" placeholder="Username" name="username" id="username">
+    </div>
+    
+    <div class="form-group last mb-4">
+    
+    <input type="password" class="form-control" style="background: #edf2f5;padding: 15px;" placeholder="Password" name="pass" id="password">
+    </div>
+    <input type="submit" value="Log In" class="btn btn-block btn-primary">
+    
+    </div>
+    </form>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    
+    
+    
+    </body></html>

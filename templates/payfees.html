@@ -1,0 +1,103 @@
+{% extends 's_base.html' %}
+{% block page_title %}
+Pay Fees
+{% endblock page_title %}
+{% block main_content %}
+<section class="content">
+    <div class="container-fluid">
+                  <div class="row">
+            <div class="col-md-12">
+          <!-- general form elements -->
+          <div class="card card-primary">
+            <div class="card-header">
+              <h3 class="card-title">Pay Your Fees Online</h3>
+            </div>
+  
+            <br>
+            <div class="container">
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="inputContact1">Name</label>
+                <div class="col-sm-12">
+                    <input class="form-control" id="inputContact1" type="text" placeholder="" value="{{ detail.name }}" disabled>
+                </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label" for="inputContact1">Semester</label>
+              <div class="col-sm-12">
+                  <input class="form-control" id="inputContact1" type="text" placeholder="" value="{{detail.class_id.sem}}" disabled>
+              </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="inputContact1">Department</label>
+            <div class="col-sm-12">
+                <input class="form-control" id="inputContact1" type="text" placeholder="" value=" {{detail.class_id.dept}}" disabled>
+            </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label" for="inputContact1">Fees to Pay</label>
+          <div class="col-sm-12">
+            {% if detail2.paid %}
+              <input class="form-control" id="inputContact1" type="text" placeholder="" value=" ₹0" disabled>
+              {% else %}
+              <input class="form-control" id="inputContact1" type="text" placeholder="" value="₹{{detail.class_id.feedues}}" disabled>
+              {% endif %}
+          </div>
+      </div>
+                 <br>
+                 
+                 {% if detail2.paid %}
+                 
+                 <center>  <a class="btn btn-primary btn-block" href="{% url 'receiptpdf' s_id %}"  >Download Receipt</a></center>
+{% else %}
+
+
+                 <center><button class="btn btn-primary btn-block" id="pay-btn">Proceed to Pay</button></center>
+                 {% endif %}
+                </div>
+                <br>
+              <!-- </td>
+  
+              </tr>
+  
+          </tbody>
+  
+      </table> -->
+  </div>
+  </div>
+  </div>
+  </div>
+  </section>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+  var options = {
+      
+    // Enter the Key ID generated from the Dashboard
+    key: "rzp_test_7IkYxSG9bGlrqZ", 
+      
+    // Amount is in currency subunits.
+    // Default currency is INR. Hence, 
+    // 50000 refers to 50000 paise
+    
+    amount: "{{ razorpay_amount }}", 
+    
+    currency: "INR",
+      
+    // Your/store name.
+    name: "JMIT", 
+      
+    // Pass the `id` obtained in the response of Step 1
+    order_id: "{{ razorpay_order_id }}", 
+    callback_url: "{% url 'paymenthandler' s_id %}",
+  };
+    
+  // initialise razorpay with the options.
+  var rzp1 = new Razorpay(options);
+    
+  // add event listner to the payment button.
+  document.getElementById("pay-btn").onclick = function (e) {
+    rzp1.open();
+    e.preventDefault();
+  };
+</script>
+
+{% endblock main_content %}

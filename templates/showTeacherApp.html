@@ -1,0 +1,64 @@
+{% extends 'hod.html' %}
+
+{% block main_content %}
+
+<div class="row" style="margin-top:5px;margin-bottom:50px;">
+    <h2 style="margin-left: 80px;">Approve Teacher Leave</h2>
+        <div class="col-md-12">
+            {% for s in app %}
+                {% if not s.status %}
+                    <form method="POST">
+                        {%  csrf_token  %}
+                        <center style="margin-left:180px;margin-top:3px ">
+                        <table class="table" style="margin-left:-120px;margin-top:3px ">
+                            <tbody>
+                                <tr>
+                                    <td scope="row"><strong>{{ s.content }} by {{s.user}}.</strong></td>
+                                    <td><strong >Your Response : </strong> This application is {{ s.status }}</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </center>
+                        <div class="row">
+                            <div class="col-md-6" style="margin-left:200px;">
+                                <button type = 'submit' class="btn btn--green" style="background-color:green;" value="accept" name="status" onclick = window.location.href='{% url "ShowTeacherApp" h_id %}'> accept </button>
+                            </div>
+                            <div class="col-md-6" style="margin-left: -200px;">
+                                <button  class="btn btn--green" style="background-color:red;" type="submit" value="reject" name="status" onclick = window.location.href='{% url "ShowTeacherApp" h_id %}'> reject </button>
+                            </div>
+                            <input type="hidden" name="answer" value="{{ s.id }}">
+                        </div>
+                    </form>
+                {% endif %}
+            {% endfor %}
+            
+            <form method="POST">
+                {%  csrf_token  %}
+                    <center style="margin-left:180px;margin-top:3px ">
+                        <table class="table" style="margin-left:-120px;margin-top:3px ">
+                            <tbody>
+                                <thead>
+                                    <th>Reason for leave by Teacher</th>
+                                    <th>Your Response</th>
+                                </thead>
+                                
+                                {% for s in app %}
+                                    {% if s.status %}
+                                    
+                                    <tr>
+                                        <td>{{ s.content }} by {{s.user}}</td>
+                                        <td>This application is {{ s.status }}</td>
+                                    </tr>
+                                    {% endif %}        
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                        </center>
+                    </form>
+        </div>
+</div>
+
+<br><br>
+
+{% endblock main_content %}

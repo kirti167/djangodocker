@@ -1,0 +1,73 @@
+{% extends 'header.html' %}
+{% load static %}
+{% block content %}
+<style>
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+body, html{
+  height: 100%;
+}
+.one{
+  height: 100%;
+  display: flex;
+  justify-content: left;
+  text-align: left;
+  margin-left: 5%;
+}
+.animate {
+  border-right: solid 3px #FC6D6D;
+  white-space: nowrap;
+  overflow: hidden;    
+  font-family: 'Poppins', sans-serif;
+  font-size: 9vh;
+  color: white;
+  vertical-align: middle 
+ 
+}
+
+/* Animation */
+.animate{
+  animation: animated-text 3s steps(29,end) 1s 1 normal both,
+             animated-cursor 500ms steps(29,end) infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 300px;}
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor{
+  from{border-right-color: #FC6D6D;}
+  to{border-right-color: transparent;}
+}
+
+.content{
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-family: "Roboto",sans-serif;
+    color: #777;
+}
+</style>
+<link rel="stylesheet" href="{% static 'css/procedure.css' %}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<section style="background-color: cornsilk;background-image: url(https://media.istockphoto.com/photos/white-calendar-on-orange-background-picture-id916563360?k=6&m=916563360&s=612x612&w=0&h=ukBCtlcpMa7WesOgFqOvfS3XkJOzyST8VBU76Lh05vw=);background-repeat:no-repeat;  background-size: 1400px 500px;height: 500px;max-width: 100%;" >
+    <br><br><br><br> <br> <br> <br> <br>
+<center><div class="one"><p class="animate">Academic <br> Calender</p></div></center> <br><br><br> <br> <br>
+</section> <br><br>
+<div class="container">
+
+
+<p class="content">Academic Calendar for the session 2020-21 containing the upcoming schedule. It allows a student to create multi-year plans, create and print semester schedules, and view academic records with projected credit totals.</p>
+<br>
+ 
+<p class="content">For Engineering: &nbsp;
+<a href="{% static 'ac.pdf' %}" type="button"  class="btn btn-primary">Download</a><br> <br>
+Others: &emsp14; &emsp14; &emsp14; &emsp14; &emsp14; &emsp14; &emsp14; &emsp14; &nbsp;
+
+<a href="{% static 'ac.pdf' %}" type="button"  class="btn btn-primary">Download</a><br>
+<br></p>
+        </div>
+    {% endblock %}

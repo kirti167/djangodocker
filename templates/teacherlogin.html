@@ -1,0 +1,159 @@
+{% extends 'base.html' %}
+{% block page_title %}
+
+{% endblock page_title %}
+{% block main_content %}
+<style>
+
+.img-circle {
+  border-radius: 100%;
+}
+h4 {
+  line-height: 22px;
+  font-size: 18px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #455a64;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+.card .card-subtitle {
+  font-weight: 300;
+  margin-bottom: 15px;
+  color: #99abb4;
+}
+a.link {
+  color: #455a64;
+}
+.btn-secondary, .btn-secondary.disabled {
+  -webkit-box-shadow: 0 2px 2px 0 rgba(169, 169, 169, 0.14), 0 3px 1px -2px rgba(169, 169, 169, 0.2), 0 1px 5px 0 rgba(169, 169, 169, 0.12);
+  box-shadow: 0 2px 2px 0 rgba(169, 169, 169, 0.14), 0 3px 1px -2px rgba(169, 169, 169, 0.2), 0 1px 5px 0 rgba(169, 169, 169, 0.12);
+  -webkit-transition: 0.2s ease-in;
+  -o-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+  background-color: #ffffff;
+  color: #67757c;
+  border-color: #b1b8bb;
+}
+.btn-circle {
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+}
+.btn {
+  padding: 7px 12px;
+  cursor: pointer;
+}
+</style>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+  <div class="row">
+  <div class="col-lg-1"></div>
+      <div class="col-lg-4 col-xlg-2 col-md-5">
+          <div class="card">
+              <div class="card-body">
+                  <center class="m-t-30">
+                     
+                    
+                    <img src="{{ detail.image.url }}" class="img-circle" width="150"> 
+                     <br> <br>
+                    <h4 class="card-subtitle" style="color: black;">{{ detail.name }} 
+                      
+                        
+                      </h4> 
+                      <h6 class="card-subtitle">{{ detail.post }}</h6> 
+                      
+                  </center>
+              </div><div>
+                <hr> </div><div class='container'>
+                <small class="text-muted">Workload </small>
+                <div class="progress" style="height: 5px">
+                  <div class="progress-bar" style="width:80%;height:5px"></div></div>
+                </div>
+              <div>
+              <hr> </div>
+              <div class="card-body"> <small class="text-muted">Email address </small>
+                  <h6>{{ detail.user }}</h6> <small class="text-muted p-t-30 db">Qualifications</small>
+                  <h6>{{ detail.qualification }} 
+                  
+                  <br>
+                  
+                  
+              </div>
+              
+          </div>
+      </div>
+      <div class="col-lg-6 col-xlg-3 col-md-2">
+        <div class="card"> <br>
+          <div class="h4 text-center">Profile Information</div>
+          <div class="row pv-lg">
+              <div class="col-lg-2"></div>
+              <div class="col-lg-8">
+                  
+                      <div class="form-group">
+                          <label class="col-sm-2 control-label" for="inputContact1">Name</label>
+                          <div class="col-sm-10">
+                              <input class="form-control" id="inputContact1" type="text" placeholder="" value="{{ detail.name }}" disabled>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label class="col-sm-2 control-label" for="inputContact2">Email</label>
+                          <div class="col-sm-10">
+                              <input class="form-control" id="inputContact2" type="email" value="{{ detail.user }}" disabled>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                        <label  for="inputContact4">Teacher ID</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" id="inputContact4" type="text" value="{{ detail.id }}" disabled>
+                        </div>
+                    </div>
+                      <div class="form-group">
+                          <label  for="inputContact4">Department</label>
+                          <div class="col-sm-10">
+                              <input class="form-control" id="inputContact4" type="text" value="{{ detail.dept }}" disabled>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label class="col-sm-2 control-label" for="inputContact5">DOB</label>
+                          <div class="col-sm-10">
+                              <input class="form-control" name="dob" id="inputContact5" type="text" value="{{ detail.DOB }}" disabled>
+                          </div>
+                      </div>
+                      
+                     
+                <!-- <form method="POST">
+                    {% csrf_token %}
+                    <label for="image">Change Image</label>
+                        <div class="col-sm-10">
+                          <input type="file" name="image" id="image" accept="image/*" style="display:none;"/ >
+                        </div>
+                        <label class="col-sm-2 control-label" for="inputContact5">DOB</label>
+                          <div class="col-sm-10">
+                              <input class="form-control" name="dob" id="inputContact5" type="text" value="{{ detail.DOB }}" >
+                          </div>
+                          <button type="submit" class="btn btn-primary">Submit</button>
+                  </form> -->
+                  <!-- <form method="POST" action="" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+            
+                <input class="btn btn-primary" type="submit" name="Update Information">
+                </form>  -->
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+</div>
+</div>
+        </div>
+    </div>
+
+      
+      
+  </div>
+  </div>
+{% endblock main_content %}

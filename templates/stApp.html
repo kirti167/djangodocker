@@ -1,0 +1,44 @@
+{% extends 's_base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block main_content %}
+          <section class="content">
+            <div class="container-fluid">
+                          <div class="row">
+                    <div class="col-md-12">
+                  <!-- general form elements -->
+                  <div class="card card-primary">
+                    <div class="card-header">
+                      <h3 class="card-title">Apply for Leave</h3>
+                    </div>
+                    <br>
+                    <!-- <div class="form-control">
+                      <form method="POST">
+                        {% csrf_token %}
+                        {{form.as_p}}
+                        <button type="submit"  class="btn btn-primary btn-block">Submit Application</button>
+                      </form>
+                    </div> -->
+                    <form method="post" novalidate >
+                        {% csrf_token %} 
+                        <input type="hidden" name="next" value="{{ next }}" >
+                        
+                        <label style="font-size:20px;margin-left: 2%;">Reason for leave : </label><br>
+                          {{ form.content }} 
+                        <br><br>
+                        
+                        <label style="font-size:20px;margin-left: 2%;">To Teacher :</label><br>
+                          {{form.to_teacher}} 
+                        <br>
+                        <br><br>
+                        
+                        <button type="submit"  class="btn btn-primary btn-block">Submit Application</button>
+                    </form>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </section>
+{% endblock main_content %}
+

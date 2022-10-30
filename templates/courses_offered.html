@@ -1,0 +1,1053 @@
+{% extends "header.html" %}
+{% load static %}
+{% block content %}
+
+     
+     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+
+     <style>
+
+       body{
+       
+        background: linear-gradient(-45deg, #2bc0e4, #eaecc6);
+	
+	animation: gradient 15s ease infinite;
+       }
+         *{
+
+         margin: 0;
+             padding: 0;
+         
+         }
+ 
+.mr2 {
+  margin-right: 1rem;
+}
+.ml2 {
+  margin-left: 1rem;
+}
+.article-title {
+  font-size: 2.5rem;
+  line-height: 1;
+ font-family: 'Roboto Condensed', sans-serif;
+  text-align: center;
+  letter-spacing: 0.025em;
+  transition: font-size 0.45s ease-in-out, color 0.3s ease-out;
+}
+.header-image {
+  height: 220px;
+  
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 3rem;
+  position: relative;
+  transition: all 0.45s ease-in-out;
+}
+.overlay {
+  transition: all 0.3s ease-in-out;
+  
+ 
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.title-wrap {
+  transform: translateY(0);
+  transition: transform 0.45s ease-in;
+}
+.drop-cap {
+  font-size: 55px;
+  line-height: 28px;
+}
+.wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.book__cover-exerpt {
+  color: #6a6a6a;
+  padding: 1rem 1.5rem;
+  line-height: 1.6;
+  text-align: center;
+  max-width: 370px;
+  margin: 0 auto;
+  display: block;
+  transition: all 0.25s ease-in-out;
+}
+ 
+.book__cover {
+  height: 100%;
+  width: 100%;
+}
+.book__content {
+  text-align: justify;
+  word-wrap: break-word;
+  font-size: 1.1rem;
+  
+  transition: all 1.5s ease-in-out;
+  max-width: 750px;
+  margin: 0 auto 6rem;
+  padding: 0 2rem;
+}
+.book__content p {
+  line-height: 1.8;
+  color: #3a3a3a;
+  margin-bottom: 2.5rem;
+}
+.book {
+  overflow: hidden;
+  background: white;
+  height: 580px;
+  width: 400px;
+  box-shadow: 0 20px 30px -10px #ccc;
+  transition: all 0.5s ease-in-out;
+}
+.book:hover {
+  box-shadow: 0 6px 50px 10px #cfcfcf;
+}
+.book--expanded {
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+}
+.book--expanded .overlay {
+  opacity: 0.95;
+}
+.book--expanded .article-title {
+  color: rgb(248, 243, 222);
+  font-size: 64px;
+  letter-spacing: 0.05em;
+}
+.book--expanded .title-wrap {
+  transform: translateY(-300px);
+  color: white;
+}
+.book--expanded .book__cover-exerpt {
+  opacity: 0;
+}
+.book--expanded .book__cover {
+  height: 460px;
+  margin-bottom: 6rem;
+}
+.book--expanded .book__content {
+  opacity: 1;
+}
+.book--expanded .header-image {
+  height: 100%;
+}
+         
+         span .fa {
+             font-size: 17px;
+             margin-left: 20px;
+         }
+
+         .one{
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-family: "Roboto",sans-serif;
+    color: #777;
+    
+
+  }
+.animate {
+  border-right: solid 3px #FC6D6D;
+  white-space: nowrap;
+  overflow: hidden;    
+  font-family: 'Poppins', sans-serif;
+  font-size: 4vh;
+  color: pink;
+  vertical-align: middle 
+ 
+}
+
+/* Animation */
+.animate{
+  animation: animated-text 3s steps(29,end) 1s 1 normal both,
+             animated-cursor 500ms steps(29,end) infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 370px;}
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor{
+  from{border-right-color: #FC6D6D;}
+  to{border-right-color: transparent;}
+}
+     
+  /* table */
+ 
+
+table {
+  border: 1px #a39485 solid;
+  font-size: .9em;
+  box-shadow: 0 2px 5px rgba(0,0,0,.25);
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+th {
+  text-align: left;
+}
+  
+thead {
+  font-weight: bold;
+  color: #fff;
+  background: #192f59;
+}
+  
+ td, th {
+  padding: 1em .5em;
+  vertical-align: middle;
+}
+  
+ td {
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  background: #fff;
+}
+
+
+ @media all and (max-width: 768px) {
+    
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  
+  th {
+    text-align: right;
+  }
+  
+  table {
+    position: relative; 
+    padding-bottom: 0;
+    border: none;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+  }
+  
+  thead {
+    float: left;
+    white-space: nowrap;
+  }
+  
+  tbody {
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    white-space: nowrap;
+  }
+  
+  tr {
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  th {
+    border-bottom: 1px solid #a39485;
+  }
+  
+  td {
+    border-bottom: 1px solid #e5e5e5;
+  }
+  
+  
+  }
+     </style>
+     
+  <br>
+  <div class="container">
+  <center><h2 style="color: black;font-size: 38px;" data-aos="fade-right"  data-aos-duration="1000" class="animate">Engineering</h2></center><br>
+    
+    <!--<h1><center>
+      ENGINEERING</center></h1>-->
+      <!-- --------------row1-------------- -->
+  <div class="row">
+    <!-- computer science -->
+    <div class="col-sm"  data-aos="flip-left"  data-aos-duration="1000">
+  <div class="wrapper">
+    <div class="book">
+    <div class="book__cover">
+      <div class="header-image" style="background-image: url(https://d3nn873nee648n.cloudfront.net/900x600/17491/120-SM775434.jpg);"><div class="overlay"></div></div>
+      <div class="title-wrap">
+     <h1 class="article-title">Computer Science</h1>
+     
+        </div>
+     <p class="book__cover-exerpt">
+         
+      Computer science or computing science (sometimes abbreviated CS) is the study of the theoretical foundations of information and computation, and of practical techniques for their implementation and application in computer systems. It is frequently described as the systematic study of algorithmic processes that create, describe, and transform information.   <br><br>
+         
+    
+     </p>
+    
+    </div>
+    <div class="book__content">
+      <h2>OBJECTIVE</h2>
+   
+<p class="one">   1. To enable students to acquire specialized knowledge for various subjects and enhance their personal, social and cognitive skills to meet challenges of today and tomorrow. <br>
+   2. To provide efficient and effective computer education and to inculcate modern technical values among the students. <br>
+   3. To move ahead with the time which demands better and smarter computer education. <br>
+   4. To analyze the local and global impact of computing on individuals, organizations and society. <br> </p>
+<br> 
+   <h2>BENEFITS</h2>
+
+
+  <p class="one"> 1. Improves the spectrum of knowledge in designing, its implementation, management of information system including both hardware and software. <br>
+  2. Helps students learn the handling of latest tools and techniques necessary for the success of project. <br>
+  3. Offers knowledge in core concepts of digital world that hold the thread to future technologies, such as cloud computing, artificial intelligence, data analytics, robotics, graphic solutions, simulations, etc.</p> 
+  <br><h2>Career Opportunities </h2>
+
+<p class="one">
+  Once the students come out of JMIT,RADAUR with flying colors in Computer Science Engineering then they get amazing job outcomes in distinguished organizations, like Accenture, HCL, Wipro Technologies, Cognizant, TCS, LG Soft, Tech Mahindra, Google, Reliance Industries Limited, Oracle, Dell, Unisys, Sapient, MRF, IBM, Samsung, Infosys, and many others. Some of the common positions that students can serve after completing their B.Tech Computer Science Engineering are: <br>
+
+  -Developers <br>
+  -Design Engineers <br>
+  -Solution Integrators  <br>
+  -Network Administrators <br>
+  -Database Administrators <br>
+  -Software Testers <br>
+  -Domain Consultants <br>
+  -Industries Officer (Technical) <br>
+  -IT Manager <br>
+  -Jr. Software Developer <br>
+  -Software Engineer <br>
+  -System Engineers <br>
+  -Team Leads/ Architect <br>
+  -Technology Analyst <br> <br></p>
+  <h2>Placement Highlights</h2>
+  
+  <table>
+    <thead>
+    <tr>
+    <th><strong>Year</strong></th>
+    <th><strong>No. of placement offers</strong></th>
+    </tr></thead>
+    <tbody>
+    <tr>
+    <td>2020-21</td>
+    <td>123 (Placement process is going on)</td>
+    </tr>
+    <tr>
+    <td>2019-20</td>
+    <td>121</td>
+    </tr>
+    <tr>
+    <td>2018-19</td>
+    <td>134</td>
+    </tr>
+    <tr>
+    <td>2017-18</td>
+    <td>102</td>
+    </tr>
+    <tr>
+    <td>2016-17</td>
+    <td>104</td>
+    </tr>
+    </tbody>
+    </table>
+    <br>
+    <h2>
+        Additional Inputs</h2>
+     <p class="one">  1. Python <br>
+2. Data Analytics <br> 
+3. Artificial Intelligence <br>
+4. JavaScript(Js) <br>
+5. Android <br>
+6. Gate Classes <br>
+7. Cloud Computing </p> <br> <br>
+
+
+  
+   
+</div>
+    </div>
+  </div>
+   
+   </div>
+  
+      <div class="col-sm"  data-aos="flip-left"  data-aos-duration="1000">
+        <!-- information technology -->
+  <div class="wrapper">
+    <div class="book">
+    <div class="book__cover">
+      <div class="header-image" style="background-image: url(https://d3nn873nee648n.cloudfront.net/900x600/19256/220-SM915426.jpg);"><div class="overlay"></div></div>
+      <div class="title-wrap">
+     <h1 class="article-title">Information <br> Technology</h1>
+     
+        </div>
+     <p class="book__cover-exerpt">
+         
+      The department was started in the year 2000 with an intake of 60 students. The department offers B.Tech program in the area of IT .The department of information technology is committed to impart up-to-date knowledge to the students related to current and future technology. <br> <br><br> <br>
+         <br>
+     </p>
+    
+    </div>
+    <div class="book__content">
+      <h2>OBJECTIVE</h2>
+   
+   
+<p class="one">
+Information Technology program aims to equip the candidates with a thorough understanding of fundamentals as well as advanced principles of the area. Furthermore, the program intends to provide firsthand experience to the students as an attempt to transform them into well sought after IT professionals of tomorrow. <br>
+
+The program also focuses on: <br>
+
+    -Building productive and Industry-ready IT Engineers. <br>
+    -Inculcating students with effective communication and technical skills. <br>
+    -Recognizing societal needs and constraints in professional endeavors. <br>
+    -Delivering life-long learning to shape the upcoming leaders of tech-society. <br>
+    -Providing innovative curriculum in order to ease the technological challenges. <br>
+  </p>
+
+
+   <h2>BENEFITS</h2>
+
+
+  
+<p class="one">
+IT engineering program is fruitful in grasping thorough knowledge of the computer-based information systems. In the course of four years, the students get acquainted with the roles and responsibilities of an IT professional. Besides this, the analytical skills of the students are honed up so that they become ready for the future. <br> <br>
+In addition to the foretold benefits, the program is also advantageous as it provides: <br>
+
+    -In-depth knowledge of the latest technologies like Machine learning and Artificial intelligence <br>
+    -Industry-led guest lectures and training <br>
+    -Scope for the enhancement of students’ technical and presentation skills <br>
+    -Exposure to industries by regular industrial visits <br>
+    -Industry eccentric Curriculum. <br>
+    -Extra focus on Database, computer networking, programming, web development, cloud computing, and business intelligence. 
+  </p>
+
+  <h2>Career Opportunities </h2>
+
+
+  <p class="one">
+
+A student is never short of employment when IT engineering is being learned at the best Information Technology Engineering College. After completion of the course, an eligible student can work as Computer Programmer, Web Developer, Network Administrator, Database Administrator, System Administrator, Data Security Administrator, Information System manager, Computer Technician, Computer support Specialist etc.
+</p>
+<br> <br>
+
+  <h2>Placement Highlights</h2>
+  <div style="overflow-x: auto;">
+  <table>
+    <thead>
+    <tr>
+    <th><strong>Year</strong></th>
+    <th><strong>No. of Placement Offers</strong></th>
+    </tr></thead>
+    <tbody>
+    <tr>
+    <td>2020-2021</td>
+    <td>27(till May 2021)</td>
+    </tr>
+    <tr>
+    <td>2019-2020</td>
+    <td>38</td>
+    </tr>
+    <tr>
+    <td>2018-2019</td>
+    <td>38</td>
+    </tr>
+    <tr>
+    <td>2017-2018</td>
+    <td>51</td>
+    </tr>
+    <tr>
+    <td>2016-2017</td>
+    <td>22</td>
+    </tr>
+    <tr>
+    <td>2015-2016</td>
+    <td>57</td>
+    </tr>
+    <tr>
+    <td>2014-2015</td>
+    <td>30</td>
+    </tr>
+    </tbody>
+    </table></div>
+    <br>
+    <h2>
+        Additional Inputs</h2>
+        1. Python <br>
+2. Cloud Computing <br>
+3. Machine Learning <br>
+4. Artificial Intelligence <br>
+
+
+
+    </div>
+  </div>
+   
+   </div>
+   </div></div>
+   <div>
+     <!-- --------------row2-------------- -->
+   <div class="row">
+    <!--------------mechanical-------------->
+   <div class="col-sm"  data-aos="flip-left"  data-aos-duration="1000">
+    <div class="wrapper">
+      <div class="book">
+      <div class="book__cover">
+        <div class="header-image" style="background-image: url(https://d3nn873nee648n.cloudfront.net/900x600/16940/220-SM735516.jpg);"><div class="overlay"></div></div>
+        <div class="title-wrap">
+       <h1 class="article-title">MECHANICAL</h1>
+       
+          </div>
+       <p class="book__cover-exerpt">
+           
+        The department was started in 1999 with an intake of 60 students. The department intake has been increased to 120 students from session 2006-07. With a competent qualified faculty, Mechanical Engineering education at JMIT Radaur is more than classroom lectures. Laboratory experiments are conducted in well-maintained laboratories. 
+      </p>
+      
+      </div>
+      <div class="book__content">
+        <h2>OBJECTIVE</h2>
+   
+   
+
+<p class="one">
+
+        The world we see today is running on wheels of machines everywhere around us, which have not only reduced the manual efforts to a large extent but has also helped students to have a great future ahead. JMIT is an institute that believes in delivering premium quality education to the students pursuing undergraduate or postgraduate programs in the stream of mechanical engineering. Take a glimpse at some of the primary objectives of B. Tech Mechanical Engineering: <br>
+     
+        -Help students learn more about the designing of machines with high precision <br>
+        -Preparing students for successful careers in private industry, and government sector <br>
+        -Apply, critical thinking and problem-solving skills in professional engineering practice or in non-engineering fields, such as law, medicine or business <br>
+        -Make students identify, formulate and solve mechanical engineering problems <br>
+      </p>
+     
+     
+     
+    
+        <h2>BENEFITS</h2>
+  <p class="one">  B.Tech Mechanical course available at JMIT,RADAUR is a boon for students who want to have a successful career in future. Some of its major benefits are: <br><br>
+     
+        -Offers placement to the students of Mechanical Engineering in elite government organisations like ISRO, DRDO, Indian armed forces – Navy, Army and Air Force <br>
+        -Helps students come up with innovative ideas that can help in resolving problems of climate change, food, water and energy crisis. <br>
+        -Imbibes students with mechanical engineering skills that are highly valued in society <br>
+        -Ensures students develop a strong foothold in the working of manufacturing industries <br>
+        -Determines that students get exposure in developing new technologies for a number of industries including transport, healthcare, construction, robotics 
+      </p> 
+     
+     
+     
+       <h2>Career Opportunities </h2>
+     
+       Mechanical Engineering Program is not confined to the boundaries of theoretical knowledge. It has so many more strands attached that unfurl amazing opportunities for the students doing B.Tech mechanical after they attain the degree.
+       Whether the students are seeking job options in Maharatna and Navratna companies like NTPC, BHEL, GAIL, IOCL, NHPC, etc., or they want to join globally recognized companies, like MRF, Royal Enfield, etc. JMIT RADAUR helps them in getting employed at any of these with astounding packages.
+       Despite saying this, it is important to remember that the future increment in the remuneration of the candidates will depend profusely on their skills, knowledge and experience. That is why it is important for students to select the mechanical engineering program only if they have interest in it. As far as the jobs are concerned, Mechanical engineers with degree in B.Tech Mechanical can serve the following designations and these are:
+        <br> <br>
+           -Automotive Engineer <br>
+           -Maintenance Engineer <br>
+           -Control and Instrumentation Engineer <br>
+           -Marine Engineer <br>
+           -Mechanical Engineer <br>
+       
+       
+     
+     <br> <br>
+     
+       <h2>Centres of Excellence</h2>
+       <div class="row">
+         <div class="col-md-6 col-xs-12" style="border: 1px solid #d3d3d3; padding: 5px; text-align: center;"><img src="https://jmit.ac.in/downloads/nimages/me-daikin.jpg" alt="" width="100%"><br>DAIKIN Air-Conditioning</div>
+         <div class="col-md-6 col-xs-12" style="border: 1px solid #d3d3d3; padding: 5px; text-align: center;"><img src="https://jmit.ac.in/downloads/nimages/me-cnc.jpg" alt="" width="100%"><br>Computerized Numerical Control (CnC)</div>
+         </div>
+         <div class="row">
+             <div class="col-md-6 col-xs-12" style="border: 1px solid #d3d3d3; padding: 5px; text-align: center;"><img src="https://jmit.ac.in/downloads/nimages/me-cad.jpg" alt="" width="100%"><br>Computer Aided Design (CAD)</div>
+             <div class="col-md-6 col-xs-12" style="border: 1px solid #d3d3d3; padding: 5px; text-align: center;"><img src="https://jmit.ac.in/downloads/nimages/virtual-lab.jpg" alt="" width="100%"><br>Virtual Lab</div>
+             </div>
+     
+         
+     
+   
+    
+     
+    </div></div></div>
+     </div>
+      <div class="col-sm"  data-aos="flip-left"  data-aos-duration="1000">
+        <!----electrical-------->
+  <div class="wrapper">
+    <div class="book">
+    <div class="book__cover">
+      <div class="header-image" style="background-image: url(https://d3nn873nee648n.cloudfront.net/900x600/16999/13-SM740833.jpg);"><div class="overlay"></div></div>
+      <div class="title-wrap">
+     <h1 class="article-title">ELECTRICAL</h1>
+     
+        </div>
+     <p class="book__cover-exerpt">
+         
+      Electrical engineering is a field of engineering that generally deals with the study and application of electricity, electronics and electromagnetism. The field first became an identifiable occupation in the late nineteenth century after commercialization of the electric telegraph and electrical power supply.
+         
+     </p>
+    
+    </div>
+    <div class="book__content">
+      <h2>SCOPE</h2>
+   <p class="one">
+   
+
+      Electrical Engineering as a career and field of study has a high scope in India even beyond what is examined. It is a field that drives every other one since its application in electricity is the power behind all forms of industry either small or well established one. It will ever continue to grow as time passes. Electrical engineering generally deals with the generation of electricity, the transmission and the distribution to the consumers. <br> <br>
+      Pursue Electrical Engineering at Best Electrical Engineering College in Punjab, works with intent to craft Professionals, Researchers and Entrepreneurs through the industry aligned prospectus, state-of-the-art labs and experiential learning.
+    </p>
+
+      <h2>ABOUT THE DEPARTMENT</h2>
+      <p class="one">
+      Electrical engineering is a field of engineering that generally deals with the study and application of electricity, electronics and electromagnetism. The field first became an identifiable occupation in the late nineteenth century after commercialization of the electric telegraph and electrical power supply. <br>
+   
+   Major Areas of Electrical Engineering are Power Generation & Transmission, Automation & Control, Renewable / Clean Energy, Energy Audit and Consumer Durables. <br>
+   
+   Electrical engineering may include electronic engineering. Where a distinction is made, usually outside of the United States, electrical engineering is considered to deal with the problems associated with large-scale electrical systems such as power transmission and motor control, whereas electronic engineering deals with the study of small-scale electronic systems including computers and integrated circuits. Alternatively, electrical engineers are usually concerned with using electricity to transmit energy, while electronic engineers are concerned with using electricity to transmit information. More recently, the distinction has become blurred by the growth of power electronics.
+      </p>
+   
+   
+   
+   
+   
+      <h2>Career Opportunities </h2>
+   <p class="one"></p>
+     Electrical engineers can find a number of employment opportunities in various different sectors. Some of the top sectors that hire electrical engineers are listed below: <br>
+   <br>
+     Engineering Services <br>
+     Electric power generating installations <br>
+     Indian Railways <br>
+     Aerospace Manufacture Industry <br>
+     Automobile Industry <br>
+     Airports Authority of India <br>
+     Electricity transmission and distribution organizations <br>
+     Government Electrical Works Department <br>
+     Navigational equipment manufacturing industries <br>
+     Architecture and Construction Firms <br>
+   
+  
+   <br>
+     <h2>ACHIEVEMENTS</h2>
+     
+     <table>
+       <thead>
+       <tr>
+       <th>S.No.</th>
+       <th>Activity</th>
+       </tr></thead>
+       <tbody>
+       <tr>
+       <td>1</td>
+       <td>Vikram Sheoran Roll No. 1210757 has secured 98.8% in CAT exam held in November 13.</td>
+       </tr>
+       <tr>
+       <td>2</td>
+       <td>Manjeet Singh, Roll No. 1210727, has cleared the F-CAT exam for the armed forces, held recently and has gone for final stage of interview.</td>
+       </tr>
+       </tbody>
+       </table>
+       <br>
+       <h2>
+           HIGHLIGHTS</h2>
+          <p class="one">
+       -06 Fully Equipped Laboratories and 02 Live Labs <br>
+       -Academic MoU with NITTTR, Chandigarh and IIT, Delhi. <br>
+       -Centre of Excellence: Industrial Instrumentation & Automation (PLC, SCADA & HMI), <br>
+       -Training for Technical Software of Electrical Engineering (PLS-CADD Ultra Lite, AutoCAD (Electrical), ETAP, OrCAD-16.6) <br>
+       -On-Campus MATLAB classes <br>
+       -Personality Development Classes <br>
+       -Industrial visits for practical exposure <br>
+       -Workshops and Expert lectures <br>
+       -Technical Fest <br>
+       -GATE & Aptitude classes from experts <br>
+       -Earn while Learn scheme <br>
+       -Internet and Wi-Fi facility <br>
+       -Mock Interviews and GDs <br>
+       -Use of Research Papers in Teaching & Projects <br>
+       -Outcome based Modern Teaching aids like PPTs, Video Lectures and Virtual Labs
+      </p>
+   
+   
+    
+ </div></div></div>
+   </div>
+   </div></div>
+  
+
+
+
+
+  <div data-aos="fade-up-left">
+    <!-- --------------row3-------------- -->
+    <div class="row">
+     <!----electronics----------->
+    <div class="col-sm"  data-aos="flip-left"  data-aos-duration="1000">
+     <div class="wrapper">
+       <div class="book">
+       <div class="book__cover">
+         <div class="header-image" style="background-image: url(https://d3nn873nee648n.cloudfront.net/900x600/16940/20-SM735541.jpg);"><div class="overlay"></div></div>
+         <div class="title-wrap">
+        <h1 class="article-title">Electronics and Communication</h1>
+        
+           </div>
+        <p class="book__cover-exerpt">
+            
+          The Department of Electronics and Communication Engineering is one of the major Departments of the Institute. The Undergraduate course i.e. B.Tech (ECE) was introduced in 1995 has intake of 60 students presently. The main emphasis is laid on fundamental concepts as well as on the latest technologies.
+            
+       
+        </p>
+       
+       </div>
+       <div class="book__content">
+        <h2>OBJECTIVE</h2>
+   
+   
+
+<p class="one">
+
+        B. Tech in Electronics and Communication Engineering is a valued degree which aims to enhance the knowledge of the students and help them unveil fresh ideas to the world. The program focuses on furnishing the core skills of the students by providing hands-on -experience. In addition to the facilitation of quality academic environment, the program aims to help the students: <br><br>
+     
+        -Excel in their professional career, higher studies, and research. <br>
+        -Generate new and innovative ideas. <br>
+        -Become industry ready by participating in regular training programs.
+     <br>   -Serving the society as a whole. <br>
+     
+    </p>
+     
+     <br> 
+        <h2>BENEFITS</h2>
+     
+     
+       
+     <p class="one">
+     
+        B.Tech Electronics and Communication degree has several benefits. After becoming a graduate in the said field, the candidates become worthy of highly remunerative job profiles. The degree-program is tremendously fruitful for those students who are fascinated by electronics, mathematics and physics. The companies which are associated with power electronics, telecommunication, mobile communication, satellite communication etc are always in search of competent aspirants hence widening the scope of the discipline. Some of the ancillary benefits: <br> <br>
+     
+        -Workshops, seminars & conferences are organized in the department to gain relevant knowledge. <br>
+        -Industrial Visits and training to provide exposure to the outside world. <br>
+        -Training and placement drives are conducted by the college annually. <br>
+        -Opportunities to join various clubs operated at the department level like Project club, Robotic club, IEDC etc.. <br>
+        -Participation in different competitions like CANSAT and SMART INDIA HACKATHON. <br>
+      </p>
+     
+     
+     
+       <br><h2>Career Opportunities </h2>
+     
+     
+       
+     <p class="one">
+       B.Tech Electronics and Communication Engineering prepares the candidates for a better tomorrow. A B.Tech (ECE) graduate can set his/her foot in private as well as public sector. In public and private companies, the candidates can work as Service engineers, Network Planning engineers, R&D Software engineers, Software Analysts, Technical directors etc. Some of the prestigious public sector companies which provide career opportunities to the ECE graduates include ISRO, DRDO, BSNL, BHEL, HPCL, NTPC, BEL, IES and many more. Distinguished private companies such as Microsoft, Accenture, Delloite, Siemens etc also desire eligible candidates from the said domain.
+      </p>
+     
+     
+       <h2>PARTICIPATION & PRIZES:</h2>
+       
+       <table>
+         <tbody>
+         <tr>
+         <td><strong>1.</strong></td>
+         <td><strong>Tender Foot Award in CanSat competition to Mr. Mridul Babbar at NASA USA.</strong></td>
+         <td><img src="https://jmit.ac.in/downloads/nimages/mridual.jpg" style='max-width: 100%;'></td>
+         </tr>
+         <tr>
+         <td><strong>2.</strong></td>
+         <td><strong>India Skills Award to Mr. Kunal Jain</strong></td>
+         <td><img src="https://jmit.ac.in/downloads/nimages/kunal-jain.jpg"></td>
+         </tr>
+         <tr>
+         <td><strong>3.</strong></td>
+         <td><strong>Best Cadet Award to Mr. Ravi Ranjan</strong></td>
+         <td><img src="https://jmit.ac.in/downloads/nimages/best-cadet-ravi-ranjan-1.jpg"></td>
+         </tr>
+         </tbody>
+         </table>
+         <br>
+         <h2>
+             PROJECTS</h2>
+          <p class="one"> Quadcopter, Blind stick, Path finder, LED display board, Obstacle avoider, Line follower, MIDI, walk-n-talk, Bluetooth Robomachine, Home automation using IOT, Self balancing Robot, Electronics surveillance system.
+          </p>  
+       </div>
+     </div>
+      
+      </div>
+      </div>
+       <div class="col-sm"  data-aos="flip-left"  data-aos-duration="1000">
+         <!-------applied science--------->
+   <div class="wrapper">
+     <div class="book">
+     <div class="book__cover">
+       <div class="header-image" style="background-image: url(https://d3nn873nee648n.cloudfront.net/900x600/18705/220-ER767714.jpg);"><div class="overlay"></div></div>
+       <div class="title-wrap">
+      <h1 class="article-title">Applied Science</h1>
+      
+         </div>
+      <p class="book__cover-exerpt">
+          
+        Department cover the subjects/ areas of Applied Physics, Applied Chemistry, Mathematics, English and Communication Skills and Management. It has highly qualified faculty. It is in a position to supervise research leading to Ph.D degree.
+           
+     
+      </p>
+     
+     </div>
+     <div class="book__content">
+      <h2>OBJECTIVE</h2>
+   
+   
+<p class="one">
+
+      To equip students of engineering and technology with effective speaking and listening skills in English. <br>
+      To help them develop their soft skills and people skills, which will make the transition from college to workplace smoother and help them to excel in their jobs. <br>
+      To enhance students performance at Placement Interviews, Group Discussions and other recruitment exercises.
+    </p>
+   
+   
+  
+      <h2>ABOUT THE DEPARTMENT</h2>
+   <p class="one">
+   
+     
+   
+      Department cover the subjects/ areas of Applied Physics, Applied Chemistry, Mathematics, English and Communication Skills and Management. It has highly qualified faculty. It is in a position to supervise research leading to Ph.D degree. The equipment in the Applied Physics Laboratory includes, traveling microscopes, telescopes, spectrometer, sensitive galvanometer, Cathode ray oscilloscope, Hysteresis loop tracer, Hall effect set up, Four probe set up, Biquartz Polarimeter, Diffraction Grating, Sonometer, Thermionic Emmission kit etc. The equipment in the Applied Chemistry laboratory includes conductivity bridge, water analysis kit ( microprocessor based ) ph meter. Further, equipment like electronic balance, viscometer, flash point apparatus, penetrometer, hot air over, muffle furnace, electrical mantles, self-sufficient distillation apparatus etc. are available
+  </p>
+     
+     
+      
+   
+     </div>
+   </div>
+    
+    </div>
+    </div></div></div>
+   <br>
+
+
+
+
+
+<center><h2 style="color: black;font-size: 38px;" data-aos="fade-right"  data-aos-duration="1000" class="animate">Management</h2></center><br>
+   
+
+   <div >
+    <div class="row">
+     <!-- --------------row4-------------- -->
+    <div class="col-sm"  data-aos="flip-left"  data-aos-duration="1000">
+      <!-----mba---------->
+     <div class="wrapper">
+       <div class="book">
+       <div class="book__cover">
+         <div class="header-image" style="background-image: url(https://d3nn873nee648n.cloudfront.net/900x600/17665/220-SM786724.jpg);"><div class="overlay"></div></div>
+         <div class="title-wrap">
+        <h1 class="article-title">MBA</h1>
+        
+           </div>
+        <p class="book__cover-exerpt">
+            
+          The secret of the spectacular growth of Seth Jai Parkash Mukand Lal Institute of Engineering and Technology perhaps lies in its commitment to providing world-class education, more than just business management. The commitment is thought leadership with a deep understanding of business.
+            
+        </p>
+       
+       </div>
+       <div class="book__content">
+        <h2>OBJECTIVE</h2>
+   
+   
+<p class="one">
+   
+
+        -To inculcate knowledge in students with experiential learning and prepare them for advanced study and life-long learning. <br>
+        -To develop a strategic understanding of fundamental principles of business and competencies in the area of accounts, marketing, interpersonal skills, human resource management, and entrepreneurship. <br>
+        -To train the students for a dynamic business environment and apply their perspectives through innovation and creativity. <br>
+        -To develop competencies in qualitative and quantitative techniques. <br>
+        -To analyze the business data as well as developing an understanding of the economic, legal and social environment of Indian business. <br>
+        -To inculcate leadership skills, professionalism, effective communication skills, interpersonal skills and teamwork in students to enable them to manage and collaborate in diverse work environments. <br>
+        -To develop responsiveness to social issues and the ability to identify business solutions to address the same. Students will also be able to understand the issues of business ethics. <br>
+      </p>
+     
+     <br>
+      
+        <h2>CAREER OPPORTUNITIES</h2>
+     <p class="one">
+     Students get to work on different job profiles depending on the specialization of the MBA they have chosen.
+     <br>
+     <b>MBA in HR </b> helps the candidates become HR Generalist, Technical Recruiter, Director of Staff, Placement Manager, Training and Relations Manager, Organizational Consultant, and HR Analytics, etc. <br> <br>
+     
+     <b>MBA in Finance,</b> students get to work as Accounting Professionals, Financial Analyst, Credit Appraisal Officer, Treasury Manager, Investment and Banking Associate, Financial Risk Managers, Investment and Insurance Advisors, Investment Bankers, Financial and Investment Consultant, etc. <br> <br>
+     
+     <b>With MBA Marketing,</b> they can become Account Manager, Research Analyst / Senior Analyst, Sales Manager, Business Development Manager, Marketing Analytics, etc. MBA Sales helps students work in the areas of Corporate Finance, Corporate Banking, Credit Risk Management, Asset Management, Private Equity, Treasury and Sales & Trading. <br>
+     <br>
+     <b>With MBA IT,</b> the candidates can become Project Manager, Business Development Manager/Executive, Marketing Manager, Corporate Strategy Manager, Analytics Manager, System Manager, Data Processing Manager, Business Analyst, IT Manager, IT Consultant, IT Director, Chief Technology Officer, etc. <br>
+    </p>
+     
+
+       </div>
+     </div>
+      
+      </div>
+      </div>
+       <div class="col-sm"  data-aos="flip-left"  data-aos-duration="1000">
+         <!--------bba----------->
+   <div class="wrapper">
+     <div class="book">
+     <div class="book__cover">
+       <div class="header-image" style="background-image: url(https://aecagra.edu.in/wp-content/uploads/2021/06/library-scaled.jpg);"><div class="overlay"></div></div>
+       <div class="title-wrap">
+      <h1 class="article-title">BBA</h1>
+      
+         </div>
+      <p class="book__cover-exerpt">
+          
+        The secret of the spectacular growth of Seth Jai Parkash Mukand Lal Institute of Engineering and Technology perhaps lies in its commitment to providing world-class education, more than just business management. The commitment is thought leadership with a deep understanding of business.
+           
+     
+      </p>
+     
+     </div>
+     <div class="book__content">
+      <h2>OBJECTIVE</h2>
+   <p class="one">
+   
+
+      After completion of BBA, the students become capable of securing jobs in a variety of business spheres. The intellectual skills which develop during degree help the students in ascertaining success in the future. BBA accompanies the eligible candidates to thrive in the field of business, education, management, economics, finance, banking, consultancy, FMCG, advertising, media, public accounting, treasury, FOREX, and merchant banking</p>
+  <br>
+      <h2>CAREER OPPORTUNITIES</h2>
+      <p class="one">
+   In contemporary times, BBA ushers all of the individuals to a wide range of opportunities. Several corporate giants recruit our students annually. With the increasing number of on-campus recruitment, the eminence of the degree can be easily witnessed. Talking of opportunities, an eligible BBA graduate can work as a Finance Manager, Business Administration Researcher, Human Resource Manager, Research and Development Manager, Business Consultant, Information Systems Manager, Marketing Manager, Career development officer, Sales manager, and Recruiting Coordinator. Apart from the abovementioned profiles, the worthy candidates can also build careers in banking, academia, MNCs, and government sectors.
+   <br> 
+  </p>
+   
+   
+     </div>
+   </div>
+    
+    </div>
+    </div></div></div>
+   <br>
+
+
+<center><h2 style="color: black;font-size: 38px;" data-aos="fade-right"  data-aos-duration="1000" class="animate">Computer Application</h2></center><br>
+   
+   <div>
+    <div class="row">
+          <!-- --------------row5-------------- -->
+    <div class="col-sm"  data-aos="flip-left"  data-aos-duration="1000">
+      <!------mca--------->
+     <div class="wrapper">
+       <div class="book">
+       <div class="book__cover">
+         <div class="header-image" style="background-image: url(https://media.istockphoto.com/photos/in-technology-research-facility-female-project-manager-talks-with-picture-id1214111373?k=6&m=1214111373&s=612x612&w=0&h=pybSL-DGiy2sJTZbxu6omtabluOxRHYf7cQIsxlSQls=);"><div class="overlay"></div></div>
+         <div class="title-wrap">
+        <h1 class="article-title">MCA</h1>
+        
+           </div>
+        <p class="book__cover-exerpt">
+          The master of computer applications programme was started in 2001 with an intake of 60 students. This program caters to the foundation of computing principles and business practices and to train the students to analyse problems in a wide range of applications. This program provides exposure to the students to enterprise software management.
+       
+        </p>
+       
+       </div>
+       <div class="book__content">
+        <h2>OBJECTIVE</h2>
+        <p class="one">
+        Substantially, the program aims to prepare the candidates in consonance with the standards of software industries, corporate sector, Government sector, and academia. The efficient training under the head of MCA intends to instill full-fledged knowledge of mathematics, computing, communication, and networking into the students.Furthermore, the additional objectives of MCA degree are as follows: <br>
+     
+        -To furnish the skills which are pertinent to the IT sector. <br>
+        -To accompany the students in building up confidence throughout the course of the degree. <br>
+        -To inculcate the students with leadership and entrepreneurial skills. <br>
+        -To narrow down the gap between job providers and seekers. <br>
+        -To strengthen the scholastic aptitude of the candidates along with the development of the right morale and ethical understanding. <br>
+     </p>
+     
+     
+     
+ 
+     
+     <h2>BENEFITS</h2>
+     
+     <p class="one">
+     
+     
+     This two-year MCA program not only teaches about the fundamentals of computer applications but also imparts the empirical skills relevant to the field. MCA is a broader area that incorporates several worthwhile subjects in it. <br><br>
+     
+     The Program benefits the students by teaching them Software Design, Application Design & Development, System Development, Data Management, Management Information System, and Software Development. Furthermore, software development includes Mobile Application Development and Cloud Computing which are highly advantageous from the industrial point of view. After becoming well-versed scholars in the said field, the candidates can work in colleges, Government organizations, MNCs, etc.
+     </p>
+    
+       
+       </div>
+     </div>
+      
+      </div>
+      </div>
+       <div class="col-sm"  data-aos="flip-left"  data-aos-duration="1000">
+         <!---------bca------------>
+   <div class="wrapper">
+     <div class="book">
+     <div class="book__cover">
+       <div class="header-image" style="background-image: url(https://d3nn873nee648n.cloudfront.net/900x600/19297/220-SM914937.jpg);"><div class="overlay"></div></div>
+       <div class="title-wrap">
+      <h1 class="article-title">BCA</h1>
+      
+         </div>
+      <p class="book__cover-exerpt">
+          
+        BCA is a route for the Arts, Commerce and Non-Medical students of 10+2 to join the band of computer professionals. The Bachelor of computer applications programme has been introduced in the department of computer science & applications in the year 2017 with an intake of 60 students. 
+     
+      </p>
+     
+     </div>
+     <div class="book__content">
+      <h2>OBJECTIVE</h2>
+   
+   
+<p class="one">
+   
+
+      Bachelor of Computer Application intends to instill the fundamentals of Information Technology along with computing principles into the students. Primarily, the course aims to construct a pathway to a successful career for its students. The program also aims: <br><br>
+      
+      -To instill a thorough understanding of the subject into the students <br>
+      -To provide insight into the present-day advancements of the field by regularly updating the curriculum <br>
+      -To polish those skills which are pertinent to the IT field <br>
+      -To bring those areas of the field into the limelight which require further development <br>
+      -To prepare the students for higher studies <br>
+      -To equip the candidates as per industry needs <br>
+      
+    </p>
+  
+      
+      <h2>BENEFITS</h2>
+      
+      <p class="one">
+      For competent BCA graduates, there are numerous benefits. Upon the completion of the degree from any reputed college, the students become eligible for entering the industry. <br><br>
+      
+      A three-year BCA degree can stand equal to a four-year B.Tech (IT) if done brilliantly. With this degree, varieties of new career avenues enter the picture. From private companies & MNCs to Government sector,numerous companies desire proficient candidates. Some of the superior private sector companies which look for BCA graduates include Wipro, Infosys, TCS, HCL and other companies of a similar sort.
+      <br>
+      </p>
+         <h2>CAREER OPPORTUNITIES</h2>
+      
+      
+        <p class="one">
+      
+         Along with the conclusion of the BCA degree, numerous career opportunities come to the forefront. Any eligible candidate who has full-fledged skills demanded by the respective job profile surely gets a chance to exhibit his/her intellects. After getting the degree, the students can work as Web Developers, Web Designers, Network Administrators, System Managers, Computer Programmers, Software Developers, and Software Testers etc.
+      <br> <br>
+    </p>
+     </div>
+   </div>
+    
+    </div>
+    </div></div>
+   <br></div></div>
+  
+       
+     
+  
+   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+   <script>
+  "use strict";
+  
+  $('.book').on('click', function () {
+    $(this).toggleClass('book--expanded');
+  });
+       
+
+ 
+    
+  
+       </script>
+{% endblock %}

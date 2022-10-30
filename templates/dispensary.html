@@ -1,0 +1,197 @@
+{% extends 'header.html' %}
+{% load static %}
+{% block content %} <br>
+<style>
+
+section {
+  overflow: hidden;
+}
+
+.section-bg {
+  background: #f5f8fd;
+}
+
+.section-header h3 {
+  font-size: 36px;
+  color: #413e66;
+  text-align: center;
+  font-weight: 700;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+}
+
+.section-header p {
+  text-align: center;
+  margin: auto;
+  font-size: 15px;
+  padding-bottom: 60px;
+  color: #535074;
+  width: 50%;
+}
+
+@media (max-width: 767px) {
+  .section-header p {
+    width: 100%;
+  }
+}
+
+#services {
+  padding: 60px 0 40px 0;
+}
+
+#services .box {
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 0 10px 40px 10px;
+  background: #fff;
+  box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+}
+
+#services .box:hover {
+  transform: scale(1.1);
+}
+
+#services .icon {
+  margin: 0 auto 15px auto;
+  padding-top: 12px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+#services .icon .service-icon {
+  font-size: 36px;
+  line-height: 1;
+}
+
+#services .title {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+#services .title a {
+  color: #111;
+}
+
+#services .box:hover .title a {
+  color: #c59c35;
+}
+#services .box:hover .title a:hover {
+  text-decoration: none;
+}
+#services .description {
+  font-size: 14px;
+  line-height: 28px;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+
+
+.one{
+  height: 100%;
+margin-right: 120px;
+  
+  font-size: 50px;
+  color:white;
+}
+
+.two{
+  margin-top: 0;
+    margin-bottom: 1rem;
+    font-family: "Roboto",sans-serif;
+    color: #777;
+    font-size: 18px;
+
+}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<section style="background-color: cornsilk;background-image: url(https://d3nn873nee648n.cloudfront.net/900x600/19077/20-FN894911.jpg);background-repeat:no-repeat;  background-size: 1400px 500px;height: 450px;max-width: 100%;" >
+  <br><br><br><br> <br> <br> <br> <br>
+<center><p style="text-align:right;" class="one animate__animated animate__fadeInLeft animate__delay-1s">DISPENSARY</p></center> <br><br>
+</section> <br><br>
+
+
+ <div class="container" data-aos="fade-right" data-aos-duration="700">
+  <h3>ABOUT DISPENSARY</h3>
+  
+  
+  <br> <p class="two" data-aos="fade-right" data-aos-duration="700">
+  The institution takes extreme care of the health of the students. The institution offers
+   free medical facility to the all students and staff. Medical facilities are provided to
+  the staff and students through the Health Care Centre (Day care facility) located within
+  the campus.  Our medical officer visits the OPD for regular health check-up of the students.
+  <br>
+
+  The institute provides Medicare facilities to the students and its employees. A dormitory
+  is setup for the use of patients in B Block. The Institute has its own dispensary with a
+ qualified Doctor and a Pharmacist for regular health care of students and staff. First-aid
+ boxes are also provided at appropriately all important locations (hostels, workshops and with sports in- charge)
+<ul class="two" data-aos="fade-right" data-aos-duration="700">
+ <li>Health insurance to the BPL families of 04 adopted villages.</li>
+<li>Staff covered under Medi-Claim insurance with 40% contribution of premium by the institute (in self financed institutes).</li>
+<li>All students covered under accidental insurance.</li>
+<li>Public liability policy covers upto 5 Crores.</li>
+</ul></p>
+</div>
+
+<section class="services section-bg" id="services">
+  <div class="container">
+    <header class="section-header">
+      <h3> Medical Services</h3> <br>
+
+     
+    </header>
+
+    <div class="row">
+      <div class="col-md-6 col-lg-4">
+        <div class="box" data-aos="fade-right" data-aos-duration="700" >
+          <div class="icon" style="background: #192f59;;">
+            <i class="fa fa-stethoscope" aria-hidden="true" style="font-size: 40px;color:#c59c35; "></i>
+
+          </div>
+
+          <h4 class="title"><a href="">Free Checkup</a></h4>
+
+          <p class="description">Free medical check-up of all students regularly in Campus and Hostels. <br> <br></p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="box" data-aos="fade-up" data-aos-duration="700">
+          <div class="icon" style="background: #192f59;">
+            <i class="fa fa-clipboard service-icon" style="color: #c59c35;"></i>
+          </div>
+
+          <h4 class="title"><a href="">Insurance</a></h4>
+
+          <p class="description">Staff covered under Medi-Claim insurance with 40-50% contribution of premium by the institute.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="box" data-aos="fade-left"  data-aos-duration="700" >
+          <div class="icon" style="background: #192f59;">
+            <i class="fa fa-ambulance" aria-hidden="true" style="font-size: 40px;color: #c59c35;"></i>
+
+          </div>
+
+          <h4 class="title"><a href="">24 hours</a></h4>
+
+          <p class="description">24 Hours Medical facilities and Ambulance available in Campus <br> <br></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% endblock %}
