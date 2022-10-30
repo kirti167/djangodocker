@@ -27,4 +27,4 @@ jobs:
         tags: kirtinagpal077/app
    
     - name: docker run 
-      run: docker run -d -p8001:8000 kirtinagpal077/app
+      run: docker run -d -p8009:8000 kirtinagpal077/app
