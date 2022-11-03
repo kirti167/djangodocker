@@ -25,8 +25,8 @@ jobs:
       with:
         push: true
         tags: kirtinagpal077/app
-    - name: docker ps 
-      run: docker ps -a
    
     - name: docker run 
       run: docker run -d -p8009:8000 kirtinagpal077/app
+    - name: docker ps 
+      run: docker ps -a
