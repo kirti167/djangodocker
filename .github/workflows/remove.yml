@@ -23,6 +23,6 @@ jobs:
     - name: docker ps 
       run: docker ps
     - name: docker delete exited container
-      run: $ docker rm $(docker ps -a -q -f status=exited)
+      run: $ {{docker rm $(docker ps -a -q -f status=exited)}}
     - name : docker ps  
       run: docker ps 
