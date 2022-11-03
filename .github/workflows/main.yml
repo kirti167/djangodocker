@@ -23,10 +23,13 @@ jobs:
     - name: Build and push
       uses: docker/build-push-action@v3
       with:
-        push: true
+        push: false
         tags: kirtinagpal077/app
    
     - name: docker run 
       run: docker run -d -p8009:8000 kirtinagpal077/app
     - name: docker ps 
       run: docker ps -a
+    - name: docker ps 
+      run: docker ps   
+
